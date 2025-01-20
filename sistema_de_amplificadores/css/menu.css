@@ -1,0 +1,37 @@
+﻿/* styles do menu do sistema */
+
+/* listas desordenadas do menu */
+.navbar_menu ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+/* itens das listas */
+.navbar_menu li {
+    display: inline;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.navbar_menu {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.navbar_menu a {
+    text-decoration: none;
+    border: solid 1px #333;
+    padding: 5px 10px;
+    color: #333;
+    border-radius: 7px;
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 1, 1), color 0.3s ease;
+}
+
+.navbar_menu a:hover {
+    background-color: #333;
+    color: #fff;
+}

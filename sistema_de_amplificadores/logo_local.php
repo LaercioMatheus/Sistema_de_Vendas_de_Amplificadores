@@ -1,0 +1,1 @@
+<img class="logo" src="../loja_de_amplificadores/img/ROCK_N´ROLL_Amplificadores.png" alt="Logo do Site">

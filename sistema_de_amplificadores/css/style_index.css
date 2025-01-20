@@ -1,0 +1,184 @@
+/*FONTE DO SITE TODO*/
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400&display=swap");
+
+/*FONTE DO footer DO SITE*/
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400&family=Roboto+Slab:wght@100..900&display=swap");
+
+/*FAVICON DO SITE*/
+
+/*RESET DA PÁGINA DO SITE*/
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+/*div container*/
+#container {
+  background-color: #e4e0e0;
+  padding: 5px;
+  width: 100%;
+  max-width: 100vw;
+  max-width: 100%;
+  font-family: "Kanit";
+}
+
+/* div header */
+#header {
+  /* padding: 5px; */
+  position: relative;
+  border-radius: 5px;
+  border: solid #6c757d;
+}
+
+/* div CONTEUDO_ESPECIFICO  */
+#conteudo_especifico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_title {
+  margin: 15px;
+}
+
+/*STILO DOS FORMULARIOS*/
+.form-container {
+  background-color: rgb(24 83 196 / 35%);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 0px #1a1c1d;
+  width: 30rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-header {
+  background-color: lightgray;
+  padding: 10px;
+  margin-top: 0px;
+  border-radius: inherit;
+  width: -webkit-fill-available;
+  max-width: inherit;
+  text-align: center;
+}
+
+.form {
+  padding: 20px;
+  width: -webkit-fill-available;
+  max-width: 100%;
+}
+
+div .form-control {
+  background-color: #0000;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  border: none;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: solid 2px #f0f0f0;
+  display: block;
+  border-radius: 5px;
+  font-size: 12pt;
+  width: -webkit-fill-available;
+  max-width: inherit;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-bottom: solid 1px #03214186;
+}
+
+.form-control i {
+  position: absolute;
+  top: 45px;
+  right: 20px;
+  visibility: hidden;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form button {
+  background-color: cornflowerblue;
+  border: 2px solid #1a1c1d;
+  font-size: 14px;
+  width: inherit;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/*EFEITOS DOS CAMPOS NO MOMENTO DE ENTRADA*/
+/* Error and Success */
+/*ESSA CLASSE VAI PEGAR TODOS OS INPUTS QUE O PARAMATRO SUCCESS*/
+.form-control.success input {
+  border: 2px solid;
+  border-color: #2ece71e8;
+}
+
+.form-control.error input {
+  border: 2px solid;
+  border-color: #c44433;
+}
+
+/*ISSO VAI SER EXECUTADO SE A CLASSE FORM-CONTROL ESTIVER COM SUCCESS*/
+.form-control.form-control.success i.fa-check-circle {
+  color: #2ece71e8;
+  visibility: visible;
+}
+
+.form-control.form-control.error i.fa-exclamation-circle {
+  color: #c44433;
+  visibility: visible;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #c44433;
+}
+
+label {
+  margin-right: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* div footer */
+#footer {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Slab";
+  margin-top: 35px;
+  bottom: 0;
+  border-radius: 5px;
+  border: solid #6c757d;
+  color: #161616;
+  justify-content: space-between;
+  position: relative;
+}
+
+#footer p {
+  line-height: 10px;
+  word-spacing: 5pt;
+  margin: 10px auto 10px 15px;
+}
+
+.container_copy h6 {
+  text-align: center;
+}
+
+/*MEDIA QUERY DA RESPONSIVIDADE*/
