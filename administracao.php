@@ -70,12 +70,37 @@ session_start();
 			</p>
 
 			<!-- CARDS PARA MOSTRAR OS AMPLIFICADORES PARA A VENDA, OS MAIS VENDIDOS ETC -->
-			<div class="row row-cols-1 row-cols-md-3 g-2">
+			<!-- TENHO QUE IMPLEMENTAR ESSA PARTE DE MOSTRAR OS AMPLIFICADORES DINAMICAMENTE JUNTO COM O BANCO DE DADOS -->
+			<!-- JUNTO COM UMA ROLAGEM LATERAL PARA FICAR PASSANDO DO LONGO DO TEMPO -->
+			<!-- ESSA PARTE DEVE SER FEITA EM PHP -->
+			<div class="row row-cols-1 row-cols-md-6 g-2">
+
 				<div class="col">
 					<div class="card h-100">
-						<img src="img/img_amplificadores/baixo_ampeg_ba110.jpg" class="card-img-top" alt="Imagem do amplificador Ampeg BA110">
+						<img src="img/img_amplificadores/guitarra_marshall_code50_transistorizado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Marshall Code50 Transistorizado">
 						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
+							<h5 class="card-title">Giutarra Marshall</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+							<input type="button" class="btn btn-success">
+
+							<input type="button" class="btn btn-secondary"></input>
+							
+							<button class="btn btn-primary" type="button"><i class="fa-solid fa-circle-dollar-to-slot"></i></button>
+						</div>
+	<!-- 
+							<div class="d-grid gap-2 d-md-block">
+								<button class="btn btn-primary" type="button">Button</button>
+							</div> -->
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card h-100">
+						<img src="img/img_amplificadores/baixo_ampeg_ba110.png" class="card-img-top" alt="Imagem do amplificador para baixo Ampeg BA110">
+						<div class="card-body">
+							<h5 class="card-title">Baixo Ampeg BA110</h5>
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
 						<div class="card-footer">
@@ -83,24 +108,132 @@ session_start();
 						</div>
 					</div>
 				</div>
+
 				<div class="col">
 					<div class="card h-100">
-						<img src="img/img_amplificadores/baixo_ampeg_ba108.jpg" class="card-img-top" alt="Imagem do amplificador Ampeg BA108">
+						<img src="img/img_amplificadores/baixo_staner_bx200a.png" class="card-img-top" alt="Imagem do amplificador para baixo Staner BX200A">
 						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+							<h5 class="card-title">Baixo Staner BX200</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
 						<div class="card-footer">
 							<small class="text-body-secondary">Last updated 3 mins ago</small>
 						</div>
 					</div>
 				</div>
+
 				<div class="col">
 					<div class="card h-100">
-						<img src="img/img_amplificadores/baixo_staner_bx200a.jpg" class="card-img-top" alt="Imagem do amplificador Staner BX200A">
+						<img src="img/img_amplificadores/guitarra_blackstar_ht5r_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Blackstar HT5R Valvulado">
 						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+							<h5 class="card-title">Guitarra Blackstar</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card h-100">
+						<img src="img/img_amplificadores/guitarra_marshall_code50_transistorizado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Marshall Code50 Transistorizado">
+						<div class="card-body">
+							<h5 class="card-title">Giutarra Marshall</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card h-100">
+						<img src="img/img_amplificadores/guitarra_vox_ac15_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Vox AC15 Valvulado">
+						<div class="card-body">
+							<h5 class="card-title">Guitarra Vox AC15</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row row-cols-1 row-cols-md-6 g-2">
+				<div class="col">
+					<div class="card h-100">
+						<img src="img/img_amplificadores/baixo_staner_bx200a.png" class="card-img-top" alt="Imagem do amplificador para baixo Staner BX200A">
+						<div class="card-body">
+							<h5 class="card-title">Baixo Staner BX200a</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card h-100">
+						<img src="img/img_amplificadores/baixo_ampeg_ba108.png" class="card-img-top" alt="Imagem do amplificador para baixo Ampeg BA108">
+						<div class="card-body">
+							<h5 class="card-title">Baixo Ampeg BA108</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card h-100">
+						<img src="img/img_amplificadores/guitarra_vox_ac15_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Vox AC15 Valvulado">
+						<div class="card-body">
+							<h5 class="card-title">Guitarra Vox AC15</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card h-100">
+						<img src="img/img_amplificadores/guitarra_vox_ac15_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Vox AC15 Valvulado">
+						<div class="card-body">
+							<h5 class="card-title">Giutarra Vox AC15</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card h-100">
+						<img src="img/img_amplificadores/baixo_ampeg_ba108.png" class="card-img-top" alt="Imagem do amplificador para baixo Ampeg BA108">
+						<div class="card-body">
+							<h5 class="card-title">Baixo Ampeg BA108</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card h-100">
+						<img src="img/img_amplificadores/guitarra_blackstar_ht5r_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Blackstar HT5R Valvulado">
+						<div class="card-body">
+							<h5 class="card-title">Guitarra Blackstar</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
 						<div class="card-footer">
 							<small class="text-body-secondary">Last updated 3 mins ago</small>
@@ -114,7 +247,7 @@ session_start();
 		<div id="footer">
 			<div id="texto_institucional">
 				<p><a href="#">AMPLIFIC - CONTROL</a></p>
-				<p>GitHub: <a href="#">LaercioMatheus</a> - LinkedIn: <a href="#">LaercioMatheus</a> - Fone: <a href="#">(61) 99329 - 9400</a></p>
+				<p>GitHub: <a href="github.com/LaercioMatheus">LaercioMatheus</a> - LinkedIn: <a href="https://www.linkedin.com/in/laércio-matheus-87806b266">LaercioMatheus</a> - Fone: <a href="#">(61) 99329 - 9400</a></p>
 				<p>Address: <a href="#">Rua do Rock, 666</a> - E-mail: <a href="#">Laercioestudante17@gmail.com</a></p>
 			</div>
 			<div class="container_copy">

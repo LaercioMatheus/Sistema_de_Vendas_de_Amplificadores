@@ -76,12 +76,26 @@ body * {
   align-items: center;
 }
 
-/* div dos cards para regular o tamanho das imagens */
-div .card-img-top {
-	width: 50%;
-	/* height: 50%; */
+/* Estilos das divs de amostra dos amplificadores */
+div .row {
+  margin-top: 2rem;
 }
 
+/* div dos cards para regular o tamanho das imagens */
+div .card-img-top {
+	padding: 5px;
+}
+
+/* Div dos paragrafos dentro dos cards de amostra */
+div .card-text {
+  font-size: 14px;
+  text-align: justify;
+  color: rgb(33 37 41 / 80%);
+}
+
+div .btn {
+  margin-bottom: 1rem;
+}
 
 /*STYLES DA PÁGINA DE RELATÓRIOS*/
 #main-content {
