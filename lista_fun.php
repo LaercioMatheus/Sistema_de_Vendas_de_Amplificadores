@@ -12,46 +12,80 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/logout.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v4.7.0/css/font-awesome-css.min.css"> -->
 </head>
 
 <body>
-	<div id="container">
-		<header id="header">
-			<div id="identific">
-				<!--LOGO DO SITE DENTRO DA img PORQUE É UMA IMAGEM-->
+	<div id="container_global">
+		<header id="nav_header">
+			<div id="header_main">
+				<!--LOGO DO SITE DENTRO DA img PORQUE É UMA TAG DE IMAGEM-->
 				<a href="index.php"><img class="logo" src="img/img_project/rock_n_roll.png" alt="Logo do Sistema de Amplificadores"></a>
 
-				<span id="cred_global"> Olá <?php include "valida_login.php"; ?></span>
+				<!--INCLUDE DA CREDENCIAL-->
+				<p id="identification_user"> Olá <?php include_once("valida_login.php"); ?> </p>
 			</div>
 
-			<nav class="navbar">
+			<!--PARTE DO MENU DO SITE-->
+			<nav class="navbar_menu">
 				<?php include "menu_local.php"; ?>
+				<!-- Spinner de Carregamento -->
+				<div id="spinner"></div>
+			</nav>
+
+			<!--COMEÇO DOS ESTILOS DO MENU RESPONSIVO-->
+			<nav class="mobile-menu">
+
+				<!--ICONE DO MENU RESPONSIVO-->
+				<div class="button-mobile">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+
+				<nav class="nav-list">
+					<!--INCLUDE DA CREDENCIAL-->
+					<span class="credention"> Olá <?php include "valida_login.php"; ?></span>
+					<!--INCLUDE DO MENU-->
+					<?php include "menu_local.php"; ?>
+				</nav>
 			</nav>
 		</header>
 		<!--OS breadcrumb DO SITE-->
 		<?php include "breadcrumb.php"; ?>
 
 		<div id="conteudo_especifico">
-			<div class="table-container">
-				<h2> FUNCIONÁRIOS </h2>
-				<p>
-					<a class="action" href="cadastra_fun.php">
-						Cadastro de funcionários
-					</a>
-				</p>
+			<div class="table_container">
+
 				<?php
+
 				//CONECCAO COM O BANCO DE DADOS
 				$conectar = mysqli_connect("localhost", "root", "", "35936x");
+
 				//PESQUISANDO OS DADOS DENTRO DO BANCO DE DADOS
 				$sql_pesquisa = "SELECT
-													Nome_FUN, Funcao_FUN, Status_FUN, Cod_FUN
-												FROM
-													funcionarios";
+									Nome_FUN, Funcao_FUN, Status_FUN, Cod_FUN
+								FROM
+									funcionarios";
+
 				#ONDE ESTA A TABELA VINDA DO BANCO DE DADOS
 				$sql_resultado = mysqli_query($conectar, $sql_pesquisa);
 				?>
-				<table>
+
+				<!-- Tabela de dados dos funcionários -->
+				<table class="table table-striped table-hover caption-top table-md align-middle shadow p-3 mb-5 bg-body-tertiary rounded">
+					<caption>
+						<h3>Lista de funcionários</h3>
+					</caption>
+
+					<!-- Botão para cadastrar um novo funcionário -->
+					<div class="d-grid d-md-flex justify-content-md-end">
+						<a class="action btn btn-outline-success" href="cadastra_fun.php">Cadastrar funcionários</a>
+					</div>
 					<thead>
 						<tr>
 							<th>NOME</th>
@@ -60,40 +94,47 @@ session_start();
 							<th>AÇÃO</th>
 						</tr>
 					</thead>
-
-					<?php
-					while ($registro = mysqli_fetch_row($sql_resultado)) {
-					?>
-						<tr>
-							<td>
+					<tbody class="table-group-divider">
+						<?php
+						while ($registro = mysqli_fetch_row($sql_resultado)) {
+						?>
+							<tr>
 								<!--NOME-->
-								<a href="exibe_fun.php?codigo=<?php echo $registro[3]; ?>">
+								<td>
 									<?php echo $registro[0]; ?>
-								</a>
-							</td>
-							<td>
+								</td>
+
 								<!--FUNÇÃO-->
-								<!--ISSO CASO ESSE LINHA DA TABELA FOR UM LINK-->
-								<!--<a href="exibe_fun.php"></a>-->
-								<?php echo $registro[1]; ?>
-							</td>
-							<td>
+								<td>
+									<!--ISSO CASO ESSE LINHA DA TABELA FOR UM LINK-->
+									<!--<a href="exibe_fun.php"></a>-->
+									<?php echo $registro[1]; ?>
+								</td>
+
 								<!--STATUS-->
-								<?php echo $registro[2]; ?>
-							</td>
-							<td>
+								<td>
+									<?php echo $registro[2]; ?>
+								</td>
+
 								<!--AÇÃO-->
-								<a href="altera_fun.php?codigo=<?php echo $registro[3]; ?>">
-									Alterar
-								</a>
-							</td>
-						</tr>
-					<?php
-					}
-					?>
+								<td>
+									<div class="d-grid gap-2 d-md-block">
+										<a class="btn btn-warning" href="altera_fun.php?codigo=<?php echo $registro[3]; ?>">Alterar</a>
+										<a class="btn btn-secondary" href="exibe_fun.php?codigo=<?php echo $registro[3]; ?>"><i>i</i></a>
+									</div>
+								</td>
+							</tr>
+						<?php
+						}
+						?>
+					</tbody>
 				</table>
+				<!-- Fim da tabela de funcionarios -->
+
 			</div>
 		</div>
+
+		<!-- Cabeçalho do site -->
 		<div id="footer">
 			<div id="texto_institucional">
 				<p><a href="#">AMPLIFIC - CONTROL</a></p>
@@ -101,10 +142,16 @@ session_start();
 				<p>Address: <a href="#">Rua do Rock, 666</a> - E-mail: <a href="#">Laercioestudante17@gmail.com</a></p>
 			</div>
 			<div class="container_copy">
-				<h6>&copy; 2024 Amplificadores Rock N’ Roll</h6>
+				<h6>Amplificadores Rock N’ Roll &copy; 2025 - Todos os direitos reservados</h6>
 			</div>
 		</div>
 	</div>
+
+	<!--CONEXAO COM O SCRIPT DO JAVASCRIPT-->
+	<!-- CONEXAO COM OS FRAMEWORKS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="js/logout.js"></script>
 </body>
 
 </html>

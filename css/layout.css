@@ -34,9 +34,13 @@ body * {
   justify-content: space-between;
   width: auto;
   height: auto;
-  align-items: baseline;
+  /* align-items: baseline; */
   font-size: 15pt;
   margin-bottom: inherit;
+}
+
+#identification_user {
+  margin: 5px 5px 0 0;
 }
 
 /*STILOS DOS breadcrumb DO SITE*/
@@ -54,15 +58,17 @@ body * {
   color: #6c757d;
 }
 
-.breadcrumb-item > a {
-  color: #007bff;
-  text-decoration: none;
+.breadcrumb-item > a,
+#texto_institucional a {
+  color: #151a58;
+  text-decoration: underline;
   background-color: transparent;
 }
 
-.breadcrumb-item > a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+.breadcrumb-item > a:hover,
+#texto_institucional a:hover {
+  color: #2b2f32;
+  text-decoration: none;
 }
 
 .breadcrumb-item.active {
@@ -73,7 +79,7 @@ body * {
 #conteudo_especifico {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 
 /* Estilos das divs de amostra dos amplificadores */
@@ -83,7 +89,7 @@ div .row {
 
 /* div dos cards para regular o tamanho das imagens */
 div .card-img-top {
-	padding: 5px;
+  padding: 5px;
 }
 
 /* Div dos paragrafos dentro dos cards de amostra */
@@ -94,7 +100,11 @@ div .card-text {
 }
 
 div .btn {
-  margin-bottom: 1rem;
+  margin: 0.3rem 0 0.3rem 0;
+}
+
+caption {
+  padding-left: 1rem;
 }
 
 /*STYLES DA PÁGINA DE RELATÓRIOS*/
@@ -115,6 +125,7 @@ div .btn {
   font-size: large;
   list-style: none;
 }
+
 #main-content a {
   color: #333;
   text-decoration: none;
@@ -127,62 +138,11 @@ div .btn {
 }
 
 /*table STILO DA TABELA DE INFORMAÇÕES DO SITE*/
-.table-container {
-  background-color: #082338;
-  padding: 20px;
-  box-shadow: 5px 7px 10px 1px rgb(0 0 0 / 40%);
-  margin-top: 20px;
-}
-
-.table-container h2 {
-  font-size: 2.2rem;
-  color: honeydew;
-  margin-top: 0px;
-}
-
-table a,
-.action {
-  text-decoration: none;
-  color: floralwhite;
-  font-size: larger;
-}
-
-p a:hover {
-  color: steelblue;
-  text-decoration: underline;
-}
-
-table a:hover {
-  color: #0056d6ee;
-  text-decoration: underline;
-}
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-table,
-th,
-td {
-  border: 1px solid #909090bd;
-  color: floralwhite;
-}
-
-th,
-td {
-  padding: 12px;
-  text-align: left;
-}
-
-th {
-  color: #f6fff6;
-  background-color: #43444f;
-}
-
-tr:nth-child(even) {
-  background-color: #380808bd;
+  text-align: center;
+  font-size: 13pt;
+  /* box-shadow: solid 2px #23232e; */
 }
 
 .foto_amplic {

@@ -8,7 +8,7 @@
         <li><a href="lista_amp.php" class="active">Amplificadores</a></li>
         <li><a href="vendas.php" class="active">Vendas</a></li>
         <li><a href="relatorios.php" class="active">Relatórios</a></li>
-        <!-- <li><a href="logout.php" id="logout-btn" class="active">Sair</a></li> -->
+        <li><a href="logout.php" id="logout-btn" class="active">Sair</a></li>
     </ul>
 <?php
     }

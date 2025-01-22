@@ -16,6 +16,7 @@ session_start();
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v4.7.0/css/font-awesome-css.min.css"> -->
 </head>
 
 <body>
@@ -53,21 +54,14 @@ session_start();
 					<?php include "menu_local.php"; ?>
 				</nav>
 			</nav>
-			<!--CONEXAO COM O SCRIPT DO JAVASCRIPT-->
-			<!-- CONEXAO COM OS FRAMEWORKS -->
-			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-			<script src="js/logout.js"></script>
-
 		</header>
 		<!--OS breadcrumb DO SITE-->
 		<?php include "breadcrumb.php"; ?>
 
 		<div id="conteudo_especifico">
+			<!-- <h2>Sistema de Controle de Estoque e Venda de Amplificadores da <strong>Rock N´ Rol Amplificadores</strong></h2> -->
 
-			<p>
-			<h2>Sistema de Controle de Estoque e Venda de Amplificadores da <strong>Rock N´ Rol Amplificadores</strong></h2>
-			</p>
+			<h3>Amplific Control - <strong>Rock N´ Rol Amplificadores</strong></h3>
 
 			<!-- CARDS PARA MOSTRAR OS AMPLIFICADORES PARA A VENDA, OS MAIS VENDIDOS ETC -->
 			<!-- TENHO QUE IMPLEMENTAR ESSA PARTE DE MOSTRAR OS AMPLIFICADORES DINAMICAMENTE JUNTO COM O BANCO DE DADOS -->
@@ -83,16 +77,9 @@ session_start();
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
 						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
-							<input type="button" class="btn btn-success">
-
-							<input type="button" class="btn btn-secondary"></input>
-							
-							<button class="btn btn-primary" type="button"><i class="fa-solid fa-circle-dollar-to-slot"></i></button>
+							<input type="button" class="btn btn-primary" value="Comprar">
+							<input type="button" class="btn btn-secondary" value="Detalhes">
 						</div>
-	<!-- 
-							<div class="d-grid gap-2 d-md-block">
-								<button class="btn btn-primary" type="button">Button</button>
-							</div> -->
 					</div>
 				</div>
 
@@ -103,8 +90,9 @@ session_start();
 							<h5 class="card-title">Baixo Ampeg BA110</h5>
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+							<input type="button" class="btn btn-primary" value="Comprar">
+							<input type="button" class="btn btn-secondary" value="Detalhes">
 						</div>
 					</div>
 				</div>
@@ -116,8 +104,9 @@ session_start();
 							<h5 class="card-title">Baixo Staner BX200</h5>
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+							<input type="button" class="btn btn-primary" value="Comprar">
+							<input type="button" class="btn btn-secondary" value="Detalhes">
 						</div>
 					</div>
 				</div>
@@ -129,8 +118,9 @@ session_start();
 							<h5 class="card-title">Guitarra Blackstar</h5>
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+							<input type="button" class="btn btn-primary" value="Comprar">
+							<input type="button" class="btn btn-secondary" value="Detalhes">
 						</div>
 					</div>
 				</div>
@@ -142,8 +132,9 @@ session_start();
 							<h5 class="card-title">Giutarra Marshall</h5>
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+							<input type="button" class="btn btn-primary" value="Comprar">
+							<input type="button" class="btn btn-secondary" value="Detalhes">
 						</div>
 					</div>
 				</div>
@@ -155,8 +146,9 @@ session_start();
 							<h5 class="card-title">Guitarra Vox AC15</h5>
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+							<input type="button" class="btn btn-primary" value="Comprar">
+							<input type="button" class="btn btn-secondary" value="Detalhes">
 						</div>
 					</div>
 				</div>
@@ -170,8 +162,9 @@ session_start();
 							<h5 class="card-title">Baixo Staner BX200a</h5>
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+							<input type="button" class="btn btn-primary" value="Comprar">
+							<input type="button" class="btn btn-secondary" value="Detalhes">
 						</div>
 					</div>
 				</div>
@@ -183,8 +176,9 @@ session_start();
 							<h5 class="card-title">Baixo Ampeg BA108</h5>
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+							<input type="button" class="btn btn-primary" value="Comprar">
+							<input type="button" class="btn btn-secondary" value="Detalhes">
 						</div>
 					</div>
 				</div>
@@ -196,8 +190,9 @@ session_start();
 							<h5 class="card-title">Guitarra Vox AC15</h5>
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+							<input type="button" class="btn btn-primary" value="Comprar">
+							<input type="button" class="btn btn-secondary" value="Detalhes">
 						</div>
 					</div>
 				</div>
@@ -209,8 +204,9 @@ session_start();
 							<h5 class="card-title">Giutarra Vox AC15</h5>
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+							<input type="button" class="btn btn-primary" value="Comprar">
+							<input type="button" class="btn btn-secondary" value="Detalhes">
 						</div>
 					</div>
 				</div>
@@ -222,8 +218,9 @@ session_start();
 							<h5 class="card-title">Baixo Ampeg BA108</h5>
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+							<input type="button" class="btn btn-primary" value="Comprar">
+							<input type="button" class="btn btn-secondary" value="Detalhes">
 						</div>
 					</div>
 				</div>
@@ -235,8 +232,9 @@ session_start();
 							<h5 class="card-title">Guitarra Blackstar</h5>
 							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 						</div>
-						<div class="card-footer">
-							<small class="text-body-secondary">Last updated 3 mins ago</small>
+						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+							<input type="button" class="btn btn-primary" value="Comprar">
+							<input type="button" class="btn btn-secondary" value="Detalhes">
 						</div>
 					</div>
 				</div>
@@ -255,6 +253,12 @@ session_start();
 			</div>
 		</div>
 	</div>
+
+	<!--CONEXAO COM O SCRIPT DO JAVASCRIPT-->
+	<!-- CONEXAO COM OS FRAMEWORKS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="js/logout.js"></script>
 </body>
 
 </html>
