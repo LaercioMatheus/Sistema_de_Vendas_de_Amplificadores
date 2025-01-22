@@ -103,9 +103,9 @@ div .btn {
   margin: 0.3rem 0 0.3rem 0;
 }
 
-caption {
+/* caption {
   padding-left: 1rem;
-}
+} */
 
 /*STYLES DA PÁGINA DE RELATÓRIOS*/
 #main-content {
@@ -138,94 +138,10 @@ caption {
 }
 
 /*table STILO DA TABELA DE INFORMAÇÕES DO SITE*/
-
 table {
   text-align: center;
   font-size: 13pt;
   /* box-shadow: solid 2px #23232e; */
-}
-
-.foto_amplic {
-  width: 220px;
-}
-
-/*STILO DOS FORMULARIOS*/
-.form-container {
-  background-color: rgba(36, 24, 196, 0.527);
-  border-radius: 10px;
-  box-shadow: 4px 5px 6px 0px #1a1c1d;
-  width: 500px;
-  max-width: 100%;
-  display: inline-block;
-}
-
-.form-header {
-  background-color: antiquewhite;
-  padding: 12px;
-  margin-top: 0px;
-}
-
-.form {
-  padding: 20px;
-}
-
-.form-control {
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-  position: relative;
-}
-
-.form-control label {
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
-.form-control input {
-  border: solid 2px #f0f0f0;
-  display: block;
-  border-radius: 10px;
-  font-size: 15px;
-  width: 100%;
-  padding: 5px;
-  outline: none;
-  border: none;
-  border-bottom: solid 1px #03214186;
-}
-
-.form-control i {
-  position: absolute;
-  top: 37px;
-  right: -5px;
-  visibility: hidden;
-}
-
-.form-control small {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-}
-
-.form button {
-  background-color: cornflowerblue;
-  border: 2px solid #1a1c1d;
-  color: beige;
-  font-size: 14px;
-  width: 100%;
-  border-radius: 10px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-#style-funcao {
-  display: flex;
-}
-
-#estoquista,
-#vendedor {
-  position: relative;
-  right: 45px;
-  margin-left: 0;
 }
 
 /* div footer */

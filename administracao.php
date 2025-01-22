@@ -24,7 +24,7 @@ session_start();
 		<header id="nav_header">
 			<div id="header_main">
 				<!--LOGO DO SITE DENTRO DA img PORQUE É UMA TAG DE IMAGEM-->
-				<a href="index.php"><img class="logo" src="img/img_project/rock_n_roll.png" alt="Logo do Sistema de Amplificadores"></a>
+				<a href="administracao.php"><img class="logo" src="img/img_project/rock_n_roll.png" alt="Logo do Sistema de Amplificadores"></a>
 
 				<!--INCLUDE DA CREDENCIAL-->
 				<p id="identification_user"> Olá <?php include_once("valida_login.php"); ?> </p>

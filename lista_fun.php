@@ -119,8 +119,10 @@ session_start();
 								<!--AÇÃO-->
 								<td>
 									<div class="d-grid gap-2 d-md-block">
-										<a class="btn btn-warning" href="altera_fun.php?codigo=<?php echo $registro[3]; ?>">Alterar</a>
-										<a class="btn btn-secondary" href="exibe_fun.php?codigo=<?php echo $registro[3]; ?>"><i>i</i></a>
+										<!-- Botão de alterar as informações -->
+										<a class="btn btn-warning" href="altera_fun.php?codigo=<?php echo $registro[3]; ?>" data-bs-toggle="editar" title="Editar"><i class="fas fa-edit"></i></a>
+										<!-- Boão de acessar as informações -->
+										<a class="btn btn-secondary" href="exibe_fun.php?codigo=<?php echo $registro[3]; ?>" data-bs-toggle="informações" title="Informações"><i class="fas fa-info"></i></a>
 									</div>
 								</td>
 							</tr>
@@ -130,6 +132,14 @@ session_start();
 					</tbody>
 				</table>
 				<!-- Fim da tabela de funcionarios -->
+
+				<div class="modal-body">
+					<h2 class="fs-5">Popover in a modal</h2>
+					<p>This <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</button> triggers a popover on click.</p>
+					<hr>
+					<h2 class="fs-5">Tooltips in a modal</h2>
+					<p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
+				</div>
 
 			</div>
 		</div>

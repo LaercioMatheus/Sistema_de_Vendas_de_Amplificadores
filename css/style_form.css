@@ -1,0 +1,150 @@
+/* div CONTEUDO_ESPECIFICO  */
+
+#conteudo_especifico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_title {
+  margin: 15px;
+}
+
+/*STILO DOS FORMULARIOS*/
+.form_container {
+  background-color: rgb(24 83 196 / 35%);
+  border-radius: 10px;
+  width: 30rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+.form_header {
+  margin-top: 10px;
+  border-radius: inherit;
+  width: -webkit-fill-available;
+  max-width: inherit;
+  text-align: center;
+}
+
+.form {
+  padding: 20px;
+  width: -webkit-fill-available;
+  max-width: 100%;
+}
+
+div .form_control {
+  background-color: #0000;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  border: none;
+}
+
+.form_control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form_control input {
+  border: solid 2px #f0f0f0;
+  display: block;
+  border-radius: 5px;
+  font-size: 12pt;
+  width: -webkit-fill-available;
+  max-width: inherit;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-bottom: solid 1px #03214186;
+}
+
+.form button {
+  background-color: cornflowerblue;
+  border: 2px solid #1a1c1d;
+  font-size: 14px;
+  width: inherit;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* O tamanho da foto do amplificador na página de alteração */
+.foto_amplic {
+  width: 220px;
+}
+
+/* Colocar os radios alinhado lado a lado */
+#style_funcao {
+  display: flex;
+}
+
+#estoquista,
+#vendedor {
+  position: relative;
+  right: 35px;
+  margin-left: 0;
+}
+
+/*EFEITOS DOS CAMPOS DOS FORMULÁRIOS*/
+/* Error and Success */
+/*ESSA CLASSE VAI PEGAR TODOS OS INPUTS QUE O PARAMATRO SUCCESS*/
+/* O efeito na cor vermelha no input (error) */
+.form_control.success input {
+  border: 2px solid;
+  border-color: #2ece71e8;
+}
+
+/* O efeito na cor vermelha no input (error) */
+.form_control.error input {
+  border: 2px solid;
+  border-color: #c44433;
+}
+
+/*ISSO VAI SER EXECUTADO SE A CLASSE FORM-CONTROL ESTIVER COM SUCCESS*/
+/* Efeito de visualizar o icone (success) */
+.form_control.form_control.success i.fa-check-circle {
+  color: #2ece71e8;
+  visibility: visible;
+}
+
+/* Efeito de visualizar o icone (error) */
+.form_control.form_control.error i.fa-exclamation-circle {
+  color: #c44433;
+  visibility: visible;
+}
+
+/* A mensagem escondida abaixo do input */
+.form_control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+/* A posição do icone de erro ou o de sucesso */
+.form_control i {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  visibility: hidden;
+}
+
+/* A cor da mensagem do input dos formulários */
+.form_control.error small {
+  visibility: visible;
+  color: #c44433;
+}
+
+/* A posição e os efeitos  ????? */
+label {
+  margin-right: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/*MEDIA QUERY DA RESPONSIVIDADE*/

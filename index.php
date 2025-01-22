@@ -5,9 +5,10 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Home</title>
+	<title>AMPLIFIC - Control</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/style_index.css">
+	<link rel="stylesheet" type="text/css" href="css/style_form.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -15,9 +16,9 @@
 </head>
 
 <body>
-	<div id="container">
-		<header id="header">
-			<div id="logo">
+	<div id="container_global">
+		<header id="nav_header">
+			<div id="header_main">
 				<!--LOGO DO SITE DENTRO DA img PORQUE É UMA IMAGEM-->
 				<a href="index.php"><img class="logo" src="img/img_project/rock_n_roll.png" alt="Logo do Sistema de Amplificadores"></a>
 			</div>
@@ -27,13 +28,13 @@
 				<h1 class="title_form">Acesso à Área Restrita</h1>
 			</div>
 
-			<div class="form-container">
-				<div class="form-header">
+			<div class="form_container shadow p-3 mb-6 rounded">
+				<div class="form_header">
 					<h2>Fazer Login</h2>
 				</div>
 
 				<form method="post" action="processa_login.php" id="form" class="form">
-					<div class="form-control">
+					<div class="form_control">
 						<label for="login">Login: </label>
 						<input type="text" id="login" name="login" placeholder="Informe seu usuário..." required>
 
@@ -42,7 +43,7 @@
 
 						<small>Mensagem de erro</small>
 					</div>
-					<div class="form-control">
+					<div class="form_control">
 						<label for="senha">Senha: </label>
 						<input type="password" id="senha" name="senha" placeholder="Informe sua senha..." required>
 

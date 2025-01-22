@@ -13,6 +13,7 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 	<link rel="stylesheet" type="text/css" href="css/logout.css">
+	<link rel="stylesheet" type="text/css" href="css/style_form.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -59,7 +60,6 @@ session_start();
 		<?php include "breadcrumb.php"; ?>
 
 		<div id="conteudo_especifico">
-			<h1>Alterar usuários</h1>
 
 			<?php
 
@@ -82,15 +82,19 @@ session_start();
 			?>
 
 			<!--INICIO DO FORMULARIO-->
-			<div class="form-container">
+			<div class="form_container shadow p-3 mb-5 rounded">
+				<div class="form_header">
+					<h2>Alterar informações</h2>
+				</div>	
+
 				<form method="post" action="processa_altera_fun.php" id="form" class="form">
 					<input type="hidden" name="codigo" value="<?php echo $cod; ?>">
 					<?php
-						if ($registro[1] == "administrador") {
+					if ($registro[1] == "administrador") {
 					?>
-						<input type="hidden" name="funcao" value="<?php echo $registro[1]; ?>">
 
-						<div class="form-control">
+						<div class="form_control">
+							<input type="hidden" name="funcao" value="<?php echo $registro[1]; ?>">
 							<label for="senha">Senha: </label>
 							<input type="password" name="senha" id="senha" value="<?php echo $registro[3]; ?>" required>
 
@@ -135,20 +139,20 @@ session_start();
 								small.innerText = message;
 
 								// Adicionar a classe de erro
-								formControl.className = "form-control error";
+								formControl.className = "form_control error";
 							}
 
 							function setSuccessFor(input) {
 								const formControl = input.parentElement;
 
 								// Adicionar a classe de sucesso
-								formControl.className = "form-control success";
+								formControl.className = "form_control success";
 							}
 						</script>
 					<?php
-						} else {
+					} else {
 					?>
-						<div class="form-control">
+						<div class="form_control">
 							<label for="nome">Nome Completo: </label>
 							<input type="text" name="nome" id="nome" value="<?php echo $registro[0]; ?>" required>
 
@@ -157,7 +161,7 @@ session_start();
 
 							<small>Mensagem de erro</small>
 						</div>
-						<div class="form-control" id="style-funcao">
+						<div class="form_control" id="style-funcao">
 							<label for="estoquista">Função: </label>
 							<label for="estoquista">Estoquista </label>
 							<input type="radio" name="funcao" value="estoquista" id="estoquista"
@@ -177,7 +181,7 @@ session_start();
 								}
 								?>>
 						</div>
-						<div class="form-control">
+						<div class="form_control">
 							<label for="login">Login: </label>
 							<input type="text" name="login" id="login" value="<?php echo $registro[2]; ?>" required>
 
@@ -186,7 +190,7 @@ session_start();
 
 							<small>Mensagem de erro</small>
 						</div>
-						<div class="form-control">
+						<div class="form_control">
 							<label for="senha">Senha: </label>
 							<input type="password" name="senha" id="senha" value="<?php echo $registro[3]; ?>" required>
 
@@ -196,7 +200,7 @@ session_start();
 							<small>Mensagem de erro</small>
 						</div>
 
-						<div class="form-control">
+						<div class="form_control">
 							<label for="status">Status: </label>
 							<select name="status">
 								<option value="ativo"
@@ -221,10 +225,7 @@ session_start();
 					<button type="submit" class="style-button">Alterar Funcionário</button>
 				</form>
 			</div>
-			<!--CONECCAO COM O SCRIPT DO JAVASCRIPT-->
-			<script src="js/script_altera_fun.js"></script>
-
-			<p> <a href="lista_fun.php"> Voltar </a> </p>
+			<a class="btn btn-secondary" href="javascript:history.back()">Voltar</a>
 		</div>
 		<div id="footer">
 			<div id="texto_institucional">
@@ -237,6 +238,12 @@ session_start();
 			</div>
 		</div>
 	</div>
+
+	<!--CONEXAO COM O SCRIPT DO JAVASCRIPT-->
+	<!-- CONEXAO COM OS FRAMEWORKS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="js/script_altera_fun.js"></script>
 </body>
 
 </html>

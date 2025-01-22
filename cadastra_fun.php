@@ -81,7 +81,7 @@
 				<!--CONECCAO COM O SCRIPT DO JAVASCRIPT-->
 				<script src="js/script_cadastro_fun.js"></script>
 
-				<p> <a href="lista_fun.php"> Voltar </a> </p>
+				<a class="btn btn-secondary" href="javascript:history.back()">Voltar</a>
 			</div>
 			<div id="footer">
 			<div id="texto_institucional">
