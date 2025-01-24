@@ -23,7 +23,7 @@
 				<a href="index.php"><img class="logo" src="img/img_project/rock_n_roll.png" alt="Logo do Sistema de Amplificadores"></a>
 			</div>
 		</header>
-		<div id="conteudo_especifico">
+		<div class="conteudo_especifico">
 			<div class="container_title">
 				<h1 class="title_form">Acesso à Área Restrita</h1>
 			</div>

@@ -68,12 +68,12 @@ function setErrorFor(input, message) {
     small.innerText = message;
 
     // Adicionar a classe de erro
-    formControl.className = "form-control error";
+    formControl.className = "form_control error";
 }
 
 function setSuccessFor(input) {
     const formControl = input.parentElement;
 
     // Adicionar a classe de sucesso
-    formControl.className = "form-control success";
+    formControl.className = "form_control success";
 }

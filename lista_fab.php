@@ -122,8 +122,8 @@ session_start();
 								<!--ACAO-->
 								<td>
 									<div class="d-grid gap-2 d-md-block">
-										<a class="btn btn-warning" href="altera_fab.php?codigo=<?php echo $registro[0]; ?>">Alterar</a>
-										<a class="btn btn-secondary" href="exibe_fab.php?codigo=<?php echo $registro[0]; ?>"><i>i</i></a>
+										<a class="btn btn-warning" href="altera_fab.php?codigo=<?php echo $registro[0]; ?>"><i class="fas fa-edit"></i></a>
+										<a class="btn btn-secondary" href="exibe_fab.php?codigo=<?php echo $registro[0]; ?>"><i class="fas fa-info"></i></a>
 									</div>
 								</td>
 							</tr>

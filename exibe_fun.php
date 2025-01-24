@@ -11,7 +11,6 @@ session_start();
 	<title>Dados dos Usuários</title>
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/style_form.css">
-	<link rel="stylesheet" type="text/css" href="css/style_info.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 	<link rel="stylesheet" type="text/css" href="css/logout.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
@@ -59,7 +58,7 @@ session_start();
 		<!--OS breadcrumb DO SITE-->
 		<?php include "breadcrumb.php"; ?>
 
-		<div id="conteudo_especifico">
+		<div class="conteudo_especifico">
 
 			<?php
 			//CONECCAO COM O BANCO DE DADOS
@@ -81,20 +80,40 @@ session_start();
 			?>
 
 			<!-- Inicio da div de visualizar as informações dos funcionários -->
-			<div class="form_conteiner shadow p-3 mb-5 rounded">
+			<div class="container_info shadow p-3 mb-5 rounded">
 				<div class="form_header">
 					<h2>Informações do usuário</h2>
 				</div>
+				<form>
+					<div class="mb-3 row">
+						<label for="staticNome" class="col-sm-2 col-form-label">Nome:</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="staticNome" value="<?php echo "$registro[0]"; ?>" disabled readonly>
+						</div>
+					</div>
 
-				<section>
+					<div class="mb-3 row">
+						<label for="staticAcesso" class="col-sm-2 col-form-label">Acesso:</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="staticAcesso" value="<?php echo "$registro[1]"; ?>" disabled readonly>
+						</div>
+					</div>
 
-					<ul class="list-group list-group-flush">
-						<li class='list-group-item'> <?php echo "Nome: $registro[0]"; ?> </li>
-						<li class='list-group-item'> <?php echo "Login: $registro[1]"; ?> </li>
-						<li class='list-group-item'> <?php echo "Função: $registro[2]"; ?> </li>
-						<li class='list-group-item'> <?php echo "Status: $registro[3]"; ?> </li>
-					</ul>
-				</section>
+					<div class="mb-3 row">
+						<label for="staticFuncao" class="col-sm-2 col-form-label">Função:</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="staticFuncao" value="<?php echo "$registro[2]"; ?>" disabled readonly>
+						</div>
+					</div>
+
+					<div class="mb-3 row">
+						<label for="staticStatus" class="col-sm-2 col-form-label">Status:</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="staticStatus" value="<?php echo "$registro[3]"; ?>" disabled readonly>
+						</div>
+					</div>
+
+				</form>
 			</div>
 
 			<a class="btn btn-secondary" href="javascript:history.back()">Voltar</a>

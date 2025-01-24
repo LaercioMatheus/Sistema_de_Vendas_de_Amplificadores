@@ -59,7 +59,7 @@ session_start();
 		<!--OS breadcrumb DO SITE-->
 		<?php include "breadcrumb.php"; ?>
 
-		<div id="conteudo_especifico">
+		<div class="conteudo_especifico">
 
 			<?php
 
@@ -85,7 +85,7 @@ session_start();
 			<div class="form_container shadow p-3 mb-5 rounded">
 				<div class="form_header">
 					<h2>Alterar informações</h2>
-				</div>	
+				</div>
 
 				<form method="post" action="processa_altera_fun.php" id="form" class="form">
 					<input type="hidden" name="codigo" value="<?php echo $cod; ?>">
@@ -161,7 +161,7 @@ session_start();
 
 							<small>Mensagem de erro</small>
 						</div>
-						<div class="form_control" id="style-funcao">
+						<div class="form_control" id="style_funcao">
 							<label for="estoquista">Função: </label>
 							<label for="estoquista">Estoquista </label>
 							<input type="radio" name="funcao" value="estoquista" id="estoquista"
