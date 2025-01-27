@@ -58,27 +58,28 @@ session_start();
 		<!--OS breadcrumb DO SITE-->
 		<?php include "breadcrumb.php"; ?>
 
-		<div id="container_info">
-			<div class="form_header">
-				<h2>Relatórios de Vendas</h2>
+		<div id="conteudo_especifico">
+			<div id="container_info">
+				<div class="form_header">
+					<h2>Relatórios de Vendas</h2>
+				</div>
+				<div class="d-grid gap-1 col-6 mx-auto">
+					<a class="btn btn-outline-primary" href="rel_funcionarios_ativos.php">Relatório de Funcionários Ativos</a>
+					<a class="btn btn-outline-primary" href="rel_funcionarios_inativos.php">Relatório de Funcionários Inativos</a>
+					<a class="btn btn-outline-primary" href="rel_estoque.php">Relatório de amplificadores em estoque</a>
+					<a class="btn btn-outline-primary" href="rel_fabricantes.php">Relatório de Fabricantes</a>
+					<a class="btn btn-outline-success" href="rel_total_vendas.php">Faturamento total do mês</a>
+				</div>
 			</div>
-
-			<div class="d-grid gap-1 col-6 mx-auto">
-				<a class="btn btn-outline-primary" href="rel_funcionarios_ativos.php">Relatório de Funcionários Ativos</a>
-				<a class="btn btn-outline-primary" href="rel_funcionarios_inativos.php">Relatório de Funcionários Inativos</a>
-				<a class="btn btn-outline-primary" href="rel_estoque.php">Relatório de amplificadores em estoque</a>
-				<a class="btn btn-outline-primary" href="rel_fabricantes.php">Relatório de Fabricantes</a>
-				<a class="btn btn-outline-success" href="rel_total_vendas.php">Faturamento total do mês</a>
-			</div>
-		</div>
-		<div id="footer">
-			<div id="texto_institucional">
-				<p><a href="#">AMPLIFIC - CONTROL</a></p>
-				<p>GitHub: <a href="#">LaercioMatheus</a> - LinkedIn: <a href="#">LaercioMatheus</a> - Fone: <a href="#">(61) 99329 - 9400</a></p>
-				<p>Address: <a href="#">Rua do Rock, 666</a> - E-mail: <a href="#">Laercioestudante17@gmail.com</a></p>
-			</div>
-			<div class="container_copy">
-				<h6>&copy; 2024 Amplificadores Rock N’ Roll</h6>
+			<div id="footer">
+				<div id="texto_institucional">
+					<p><a href="#">AMPLIFIC - CONTROL</a></p>
+					<p>GitHub: <a href="#">LaercioMatheus</a> - LinkedIn: <a href="#">LaercioMatheus</a> - Fone: <a href="#">(61) 99329 - 9400</a></p>
+					<p>Address: <a href="#">Rua do Rock, 666</a> - E-mail: <a href="#">Laercioestudante17@gmail.com</a></p>
+				</div>
+				<div class="container_copy">
+					<h6>&copy; 2024 Amplificadores Rock N’ Roll</h6>
+				</div>
 			</div>
 		</div>
 	</div>

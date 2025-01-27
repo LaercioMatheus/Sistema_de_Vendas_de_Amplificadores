@@ -124,22 +124,23 @@ session_start();
 					</div>
 				</div>
 			</div>
+			<a class="btn btn-secondary" href="javascript:history.back()">Voltar</a>
 
 			<?php
 			/* CONDIÇÕES PARA APARECER O BOTÃO DE VOLTAR NA PÁGINA DE EXIBIÇÃO */
-			if ($_SESSION["funcao"] == "administrador") {
+			//if ($_SESSION["funcao"] == "administrador") {
 			?>
-				<a class="btn btn-secondary" href="lista_amp.php">Voltar</a>
+				<!-- <a class="btn btn-secondary" href="lista_amp.php">Voltar</a> -->
 			<?php
-			} elseif ($_SESSION["funcao"] == "vendedor") {
+			//} elseif ($_SESSION["funcao"] == "vendedor") {
 			?>
-				<a class="btn btn-secondary" href="vendas.php"> Voltar </a>
+				<!-- <a class="btn btn-secondary" href="vendas.php"> Voltar </a> -->
 			<?php
-			} else {
+			//} else {
 			?>
-				<a class="btn btn-secondary" href="lista_amp.php"> Voltar </a>
+				<!-- <a class="btn btn-secondary" href="lista_amp.php"> Voltar </a> -->
 			<?php
-			}
+			//}
 			?>
 		</div>
 		<div id="footer">

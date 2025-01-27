@@ -8,7 +8,7 @@ session_start();
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Fila de Compras</title>
+	<title>Fila de Vendas</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
@@ -102,7 +102,7 @@ session_start();
 							<!--MODELO-->
 							<td>
 								<!--ISSO É CASO ESSA LINHA DA TABELA FOR UM LINK-->
-								<a href="exibe_amp.php?codigo=<?php echo $registro[0]; ?>">
+								<a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="exibe_amp.php?codigo=<?php echo $registro[0]; ?>">
 									<?php echo $registro[2]; ?>
 								</a>
 							</td>
@@ -114,17 +114,13 @@ session_start();
 
 							<!--PREÇO-->
 							<td>
-								<?php
-								echo $registro[4];
-								$valor_total += $registro[4];
-								?>
+								<?php echo $registro[4];
+								$valor_total += $registro[4]; ?>
 							</td>
 
 							<!--AÇÃO-->
 							<td>
-								<a href="processa_retira_fila_compras.php?codigo=<?php echo $registro[0]; ?>">
-									Retirar da fila de compras
-								</a>
+								<a class="btn btn-outline-warning" href="processa_retira_fila_compras.php?codigo=<?php echo $registro[0]; ?>" title="Retirar da fila de vendas"><i class="fas fa-times"></i> Retirar da fila de vendas</a>
 							</td>
 						</tr>
 
@@ -141,7 +137,7 @@ session_start();
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- Cabeçalho do site -->
 		<div id="footer">
 			<div id="texto_institucional">

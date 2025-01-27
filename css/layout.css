@@ -10,9 +10,39 @@ body * {
   padding: 0;
 }
 
+body {
+  /* Esse vai ser o background do sistema */
+  background-image: linear-gradient(
+    to top,
+    lightgrey 0%,
+    lightgrey 1%,
+    #e0e0e0 26%,
+    #efefef 48%,
+    #d9d9d9 75%,
+    #bcbcbc 100%
+  );
+}
+
 /*div container*/
 #container_global {
-  background-color: #e4e0e0;
+  /* background-color: #e4e0e0; */
+  /* background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%); */
+
+  /* background-image: linear-gradient(to left, #bdbbbe 0%, #9d9ea3 100%),
+    radial-gradient(
+      88% 271%,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(254, 254, 254, 0.25) 1%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    radial-gradient(
+      50% 100%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  background-blend-mode: normal, lighten, soft-light; */
+
+  /*  */
   padding: 5px;
   width: 100%;
   max-width: 100%;

@@ -12,7 +12,7 @@
 
 /*STILO DOS FORMULARIOS*/
 .form_container {
-  background-color: rgb(24 83 196 / 35%);
+  /* background-color: rgb(24 83 196 / 35%); */
   border-radius: 10px;
   width: 35rem;
   max-width: 100%;

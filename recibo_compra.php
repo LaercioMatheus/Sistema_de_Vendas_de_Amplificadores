@@ -70,8 +70,7 @@ session_start();
 				$cod_fun = $_SESSION['codigo'];
 				//INSERINDO OS DADOS DENTRO DO BANCO DE DADOS
 				$sql_registro_vendas = "INSERT INTO vendas (Data_VEND, Funcionarios_Cod_FUN)
-										VALUES
-											('$data', '$cod_fun')";
+										VALUES ('$data', '$cod_fun')";
 				$resultado_registro_vendas = mysqli_query($conectar, $sql_registro_vendas);
 				$sql_consulta_ultima_venda = "SELECT
 												Cod_VEND
@@ -97,7 +96,7 @@ session_start();
 				echo "<p> Vendas nº: $registro_cod_ven[0]</p>";
 				echo "<p> Data: $data</p>";
 				?>
-				
+
 				<table class="table table-striped table-hover caption-top table-md align-middle shadow p-3 mb-5 bg-body-tertiary rounded">
 					<thead>
 						<tr>
@@ -114,14 +113,15 @@ session_start();
 							<tr>
 								<td><?php echo $registro[0]; ?></td>
 								<td><?php echo $registro[1]; ?></td>
-								<td><?php echo $registro[2]; $valor_total += $registro[2]; ?></td>
+								<td><?php echo $registro[2];
+									$valor_total += $registro[2]; ?></td>
 							</tr>
 						</tbody>
 					<?php
 					}
 					?>
 				</table>
-				<p>Valor Total: <?php echo $valor_total; ?></p>
+				<p>Valor Total: <?php echo number_format($valor_total, 2, ',', '.'); ?></p>
 				<a class="btn btn-outline-success" href="vendas.php">Fechar recibo</a>
 			</div>
 		</div>

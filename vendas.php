@@ -89,30 +89,32 @@ session_start();
 					while ($registro = mysqli_fetch_row($resultado_consulta)) {
 					?>
 						<tr>
+							<!--MARCA-->
 							<td>
 								<?php echo $registro[1]; ?>
-								<!--MARCA-->
 							</td>
+
+							<!--MODELO-->
 							<td>
-								<!--MODELO-->
 								<!--ISSO É CASO ESSA LINHA DA TABELA FOR UM LINK-->
-								<a href="exibe_amp.php?codigo=<?php echo $registro[0]; ?>">
+								<a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="exibe_amp.php?codigo=<?php echo $registro[0]; ?>">
 									<?php echo $registro[2]; ?>
 								</a>
 							</td>
+
+							<!--TIPO-->
 							<td>
-								<!--TIPO-->
 								<?php echo $registro[3]; ?>
 							</td>
+
+							<!--PREÇO-->
 							<td>
-								<!--PREÇO-->
 								<?php echo $registro[4]; ?>
 							</td>
+
+							<!--AÇÃO-->
 							<td>
-								<!--AÇÃO-->
-								<a href="processa_fila_compras.php?codigo=<?php echo $registro[0]; ?>">
-									Colocar na fila de compras
-								</a>
+								<a class="btn btn-outline-success" href="processa_fila_compras.php?codigo=<?php echo $registro[0]; ?>" title="Adcionar a fila de vendas"><i class="fas fa-plus"></i> Adicionar à vendas</a>
 							</td>
 						</tr>
 
@@ -123,7 +125,7 @@ session_start();
 
 				<!-- Parte dos botões de redirecionar o usuário -->
 				<div class="d-grid gap-2 d-md-block">
-					<a class="btn btn-primary" href="ver_fila_compras.php">Ver a fila de compras</a>
+					<a class="btn btn-primary" href="ver_fila_compras.php">Ver a fila de vendas</a>
 
 					<a class="btn btn-secondary" href="lista_amp.php">Voltar para lista de amplificadores</a>
 				</div>
