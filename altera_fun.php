@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
 	<meta charset="utf-8" />
@@ -60,7 +60,6 @@ session_start();
 		<?php include "breadcrumb.php"; ?>
 
 		<div class="conteudo_especifico">
-
 			<?php
 
 			//CONECCAO COM O BANCO DE DADOS

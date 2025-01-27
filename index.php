@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
-<html>
+<html lang="pt-br">
 
 <head>
 	<meta charset="utf-8" />

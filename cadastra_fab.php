@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
 	<meta charset="utf-8" />
@@ -104,22 +104,25 @@ session_start();
 						<small>Mensagem de erro</small>
 					</div>
 
-
 					<div class="form_control" id="style_funcao">
 						<label for="guitarra">Tipo de amplificador:</label>
+
 						<div class="form-check form-check-inline">
-							<label for="guitarra">Guitarra</label>
+							<label id="form_radio" for="guitarra">Guitarra</label>
 							<input type="radio" name="produto" value="guitarra" id="guitarra" checked>
 						</div>
+
 						<div class="form-check form-check-inline">
-							<label for="baixo">Baixo</label>
+							<label id="form_radio" for="baixo">Baixo</label>
 							<input type="radio" name="produto" value="baixo" id="baixo">
 						</div>
+
 						<div class="form-check form-check-inline">
-							<label for="violao">Violão</label>
+							<label id="form_radio" for="violao">Violão</label>
 							<input type="radio" name="produto" value="violao" id="violao">
 						</div>
 					</div>
+
 					<div class="form_control">
 						<label for="nome_emp">Nome da Empresa:</label>
 						<input type="text" id="nome_emp" name="nome_emp" placeholder="Digite o nome da Empresa..." required>
@@ -130,13 +133,11 @@ session_start();
 						<small>Mensagem de erro</small>
 					</div>
 
-					<button type="submit" class="style-button">Cadastrar Fornecedor</button>
+					<button type="submit">Cadastrar Fornecedor</button>
 				</form>
 			</div>
-			<!--CONECCAO COM O SCRIPT DO JAVASCRIPT-->
-			<script src="js/script_cadastra_fab.js"></script>
 
-			<a class="btn btn-secondary" href="lista_fab.php"> Voltar </a>
+			<a class="btn btn-secondary" href="javascript:history.back()"> Voltar </a>
 		</div>
 		<div id="footer">
 			<div id="texto_institucional">
@@ -149,6 +150,12 @@ session_start();
 			</div>
 		</div>
 	</div>
+
+	<!--CONEXAO COM O SCRIPT DO JAVASCRIPT-->
+	<!-- CONEXAO COM OS FRAMEWORKS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="js/script_cadastra_fab.js"></script>
 </body>
 
 </html>

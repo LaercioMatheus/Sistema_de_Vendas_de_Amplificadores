@@ -107,36 +107,6 @@ div .btn {
   padding-left: 1rem;
 } */
 
-/*STYLES DA PÁGINA DE RELATÓRIOS*/
-#main-content {
-  background-color: #0b4c7cb0;
-  padding: 20px;
-  box-shadow: 5px 7px 10px 1px rgb(0 0 0 / 40%);
-  margin: 20px 50px auto 50px;
-}
-
-.title-rel {
-  color: #1a1c1d;
-  font-size: 2.2em;
-  margin-top: 10px;
-}
-
-#main-content li {
-  font-size: large;
-  list-style: none;
-}
-
-#main-content a {
-  color: #333;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 15px;
-}
-
-#main-content a:hover {
-  text-decoration: underline;
-}
-
 /*table STILO DA TABELA DE INFORMAÇÕES DO SITE*/
 table {
   text-align: center;

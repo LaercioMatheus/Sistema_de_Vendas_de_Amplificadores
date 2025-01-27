@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
 	<meta charset="utf-8" />
@@ -69,21 +69,28 @@ session_start();
 				<form method="post" action="processa_cadastra_fun.php" id="form" class="form">
 					<div class="form_control">
 						<label for="nome">Nome Completo:</label>
-						<input type="text" id="nome" name="nome" placeholder="Digite o nome..." required>
+							<input type="text" id="nome" name="nome" placeholder="Digite o nome..." required>
 
 						<i class="fas fa-exclamation-circle"></i>
 						<i class="fas fa-check-circle"></i>
 
 						<small>Mensagem de erro</small>
 					</div>
+
 					<div class="form_control" id="style_funcao">
 						<label for="estoquista">Função:</label>
-						<label for="estoquista">Estoquista</label>
-						<input type="radio" name="funcao" value="estoquista" id="estoquista" checked>
 
-						<label for="vendedor">Vendedor</label>
-						<input type="radio" name="funcao" value="vendedor" id="vendedor">
+						<div class="form-check form-check-inline">
+							<label id="form_radio" for="estoquista">Estoquista</label>
+							<input type="radio" name="funcao" value="estoquista" id="estoquista" checked>
+						</div>
+
+						<div class="form-check form-check-inline">
+							<label id="form_radio" for="vendedor">Vendedor</label>
+							<input type="radio" name="funcao" value="vendedor" id="vendedor">
+						</div>
 					</div>
+
 					<div class="form_control">
 						<label for="login">Login:</label>
 						<input type="text" id="login" name="login" placeholder="Digite o login..." required>

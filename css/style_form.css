@@ -46,7 +46,7 @@ div .form_control {
 
 .form_control label {
   display: inline-block;
-  margin-bottom: 5px;
+  margin: 5px 15px 5px 0;
 }
 
 .form_control input {
@@ -58,7 +58,6 @@ div .form_control {
   max-width: inherit;
   padding: 5px;
   outline: none;
-  border: none;
   border-bottom: solid 1px #03214186;
 }
 
@@ -98,13 +97,18 @@ div .container_info {
 /* Colocar os radios alinhado lado a lado */
 #style_funcao {
   display: flex;
+  justify-content: space-between;
 }
 
-#estoquista,
-#vendedor {
-  position: relative;
-  right: 35px;
-  margin-left: 0;
+#form_radio {
+  margin-right: 0px;
+}
+
+.form-check {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 /*EFEITOS DOS CAMPOS DOS FORMULÁRIOS*/
@@ -146,7 +150,7 @@ div .container_info {
 /* A posição do icone de erro ou o de sucesso */
 .form_control i {
   position: absolute;
-  top: 40px;
+  top: 45px;
   right: 10px;
   visibility: hidden;
 }
@@ -155,14 +159,6 @@ div .container_info {
 .form_control.error small {
   visibility: visible;
   color: #c44433;
-}
-
-/* A posição e os efeitos  ????? */
-label {
-  margin-right: 20px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
 }
 
 /*MEDIA QUERY DA RESPONSIVIDADE*/
