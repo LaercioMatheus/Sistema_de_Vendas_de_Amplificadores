@@ -1,6 +1,6 @@
 <!--<?php
-// Exemplo de array de breadcrumbs
-/*$breadcrumbs = [
+    // Exemplo de array de breadcrumbs
+    /*$breadcrumbs = [
     ["Home", "index.php"],
     ["CursoPHP", "curso.php"],
     ["PhP2semestre", "php2semestre.php"],
@@ -45,135 +45,79 @@
                         <?php echo htmlspecialchars($breadcrumb[0]); ?>
                     </a> /
                 </li>
-            <?php endforeach; */?>
+            <?php endforeach; */ ?>
         </ul>
     </nav>
 </body>
 </html>
     -->
 
-    <!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatórios</title>
-    <link rel="stylesheet" href="estilo.css">
-
-    <style>
-        body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar a {
-    color: #333;
-    text-decoration: none;
-    padding: 10px 20px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navbar a:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-.main-content {
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-.main-content h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.main-content a {
-    color: #333;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.main-content a:hover {
-    text-decoration: underline;
-}
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 20px;
-}
-
-    </style>
+    <title>Carrossel com 6 Elementos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>ROCK N’ ROLL Amplificadores</h1>
-        </header>
-        <nav class="navbar">
-            <a href="#">Administração</a>
-            <a href="#">Funcionários</a>
-            <a href="#">Fornecedores</a>
-            <a href="#">Amplificadores</a>
-            <a href="#">Vendas</a>
-            <a href="#">Relatórios</a>
-            <a href="#">Sair</a>
-            <span>Olá Administrador do sistema</span>
-        </nav>
-        <div class="main-content">
-            <h2>RELATÓRIOS</h2>
-            <ul>
-                <li><a href="#">Relatório de Funcionários Ativos</a></li>
-                <li><a href="#">Relatório de Funcionários Inativos</a></li>
-                <li><a href="#">Relatório de amplificadores em estoque</a></li>
-                <li><a href="#">Relatório de Fabricantes</a></li>
-                <li><a href="#">Faturamento total do mês</a></li>
-            </ul>
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Carrossel de Amplificadores</h2>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="card h-100">
+                                <img src="img/img_amplificadores/guitarra_marshall_code50_transistorizado.png" class="card-img-top" alt="Amplificador Marshall">
+                                <div class="card-body">
+                                    <h5 class="card-title">Guitarra Marshall</h5>
+                                    <p class="card-text">Amplificador Marshall Code50 Transistorizado.</p>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <button class="btn btn-primary">Comprar</button>
+                                    <button class="btn btn-secondary">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Repetir o mesmo bloco para outros 5 elementos no slide -->
+                        <div class="col-md-2">[...]</div>
+                        <div class="col-md-2">[...]</div>
+                        <div class="col-md-2">[...]</div>
+                        <div class="col-md-2">[...]</div>
+                        <div class="col-md-2">[...]</div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Repetir com novos itens -->
+                        <div class="col-md-2">[...]</div>
+                        <div class="col-md-2">[...]</div>
+                        <div class="col-md-2">[...]</div>
+                        <div class="col-md-2">[...]</div>
+                        <div class="col-md-2">[...]</div>
+                        <div class="col-md-2">[...]</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controles do Carrossel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <footer class="footer">
-            <p>AMPLI - CONTROL</p>
-            <p>Rua do Rock, 666 -- E-mail: contato@ampli_control.com.br -- Fone: (61) 9966 - 6677</p>
-        </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

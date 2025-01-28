@@ -67,181 +67,218 @@ session_start();
 			<!-- TENHO QUE IMPLEMENTAR ESSA PARTE DE MOSTRAR OS AMPLIFICADORES DINAMICAMENTE JUNTO COM O BANCO DE DADOS -->
 			<!-- JUNTO COM UMA ROLAGEM LATERAL PARA FICAR PASSANDO DO LONGO DO TEMPO -->
 			<!-- ESSA PARTE DEVE SER FEITA EM PHP -->
-			<div class="row row-cols-1 row-cols-md-6 g-2">
 
-				<div class="col">
-					<div class="card h-100">
-						<img src="img/img_amplificadores/guitarra_marshall_code50_transistorizado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Marshall Code50 Transistorizado">
-						<div class="card-body">
-							<h5 class="card-title">Giutarra Marshall</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
-							<input type="button" class="btn btn-primary" value="Comprar">
-							<input type="button" class="btn btn-secondary" value="Detalhes">
+			<!-- Inicio da amostra dos elemtos do sistema -->
+			<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+
+					<!-- Slide 1 -->
+					<div class="carousel-item active">
+						<div class="row">
+
+							<!-- 1 elemento -->
+							<div class="col-md-2">
+								<div class="card h-100">
+									<img src="img/img_amplificadores/guitarra_marshall_code50_transistorizado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Marshall Code50 Transistorizado">
+									<div class="card-body">
+										<h5 class="card-title">Giutarra Marshall</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+										<input type="button" class="btn btn-primary" value="Comprar">
+										<input type="button" class="btn btn-secondary" value="Detalhes">
+									</div>
+								</div>
+							</div>
+
+							<!-- 2 elemento -->
+							<div class="col-md-2">
+								<div class="card h-100">
+									<img src="img/img_amplificadores/baixo_ampeg_ba110.png" class="card-img-top" alt="Imagem do amplificador para baixo Ampeg BA110">
+									<div class="card-body">
+										<h5 class="card-title">Baixo Ampeg BA110</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+										<input type="button" class="btn btn-primary" value="Comprar">
+										<input type="button" class="btn btn-secondary" value="Detalhes">
+									</div>
+								</div>
+
+							</div>
+
+							<!-- 3 elemento -->
+							<div class="col-md-2">
+								<div class="card h-100">
+									<img src="img/img_amplificadores/baixo_staner_bx200a.png" class="card-img-top" alt="Imagem do amplificador para baixo Staner BX200A">
+									<div class="card-body">
+										<h5 class="card-title">Baixo Staner BX200</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+										<input type="button" class="btn btn-primary" value="Comprar">
+										<input type="button" class="btn btn-secondary" value="Detalhes">
+									</div>
+								</div>
+							</div>
+
+							<!-- 4 elemento -->
+							<div class="col-md-2">
+								<div class="card h-100">
+									<img src="img/img_amplificadores/guitarra_blackstar_ht5r_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Blackstar HT5R Valvulado">
+									<div class="card-body">
+										<h5 class="card-title">Guitarra Blackstar</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+										<input type="button" class="btn btn-primary" value="Comprar">
+										<input type="button" class="btn btn-secondary" value="Detalhes">
+									</div>
+								</div>
+							</div>
+
+							<!-- 5 elemento -->
+							<div class="col-md-2">
+								<div class="card h-100">
+									<img src="img/img_amplificadores/guitarra_marshall_code50_transistorizado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Marshall Code50 Transistorizado">
+									<div class="card-body">
+										<h5 class="card-title">Giutarra Marshall</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+										<input type="button" class="btn btn-primary" value="Comprar">
+										<input type="button" class="btn btn-secondary" value="Detalhes">
+									</div>
+								</div>
+							</div>
+
+							<!-- 6 elemento -->
+							<div class="col-md-2">
+								<div class="card h-100">
+									<img src="img/img_amplificadores/guitarra_vox_ac15_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Vox AC15 Valvulado">
+									<div class="card-body">
+										<h5 class="card-title">Guitarra Vox AC15</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+										<input type="button" class="btn btn-primary" value="Comprar">
+										<input type="button" class="btn btn-secondary" value="Detalhes">
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col">
-					<div class="card h-100">
-						<img src="img/img_amplificadores/baixo_ampeg_ba110.png" class="card-img-top" alt="Imagem do amplificador para baixo Ampeg BA110">
-						<div class="card-body">
-							<h5 class="card-title">Baixo Ampeg BA110</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
-							<input type="button" class="btn btn-primary" value="Comprar">
-							<input type="button" class="btn btn-secondary" value="Detalhes">
+
+					<!-- Slide 2 -->
+					<div class="carousel-item">
+						<div class="row">
+							<!-- 1 elemento -->
+							<div class="col-md-2">
+								<div class="card h-100">
+									<img src="img/img_amplificadores/baixo_staner_bx200a.png" class="card-img-top" alt="Imagem do amplificador para baixo Staner BX200A">
+									<div class="card-body">
+										<h5 class="card-title">Baixo Staner BX200a</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+										<input type="button" class="btn btn-primary" value="Comprar">
+										<input type="button" class="btn btn-secondary" value="Detalhes">
+									</div>
+								</div>
+							</div>
+
+							<!-- 2 elemento -->
+							<div class="col-md-2">
+								<div class="card h-100">
+									<img src="img/img_amplificadores/baixo_ampeg_ba108.png" class="card-img-top" alt="Imagem do amplificador para baixo Ampeg BA108">
+									<div class="card-body">
+										<h5 class="card-title">Baixo Ampeg BA108</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+										<input type="button" class="btn btn-primary" value="Comprar">
+										<input type="button" class="btn btn-secondary" value="Detalhes">
+									</div>
+								</div>
+							</div>
+
+							<!-- 3 elemento -->
+							<div class="col-md-2">
+								<div class="card h-100">
+									<img src="img/img_amplificadores/guitarra_vox_ac15_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Vox AC15 Valvulado">
+									<div class="card-body">
+										<h5 class="card-title">Guitarra Vox AC15</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+										<input type="button" class="btn btn-primary" value="Comprar">
+										<input type="button" class="btn btn-secondary" value="Detalhes">
+									</div>
+								</div>
+							</div>
+
+							<!-- 4 elemento -->
+							<div class="col-md-2">
+								<div class="card h-100">
+									<img src="img/img_amplificadores/guitarra_vox_ac15_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Vox AC15 Valvulado">
+									<div class="card-body">
+										<h5 class="card-title">Giutarra Vox AC15</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+										<input type="button" class="btn btn-primary" value="Comprar">
+										<input type="button" class="btn btn-secondary" value="Detalhes">
+									</div>
+								</div>
+							</div>
+
+							<!-- 5 elemento -->
+							<div class="col-md-2">
+								<div class="card h-100">
+									<img src="img/img_amplificadores/baixo_ampeg_ba108.png" class="card-img-top" alt="Imagem do amplificador para baixo Ampeg BA108">
+									<div class="card-body">
+										<h5 class="card-title">Baixo Ampeg BA108</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+										<input type="button" class="btn btn-primary" value="Comprar">
+										<input type="button" class="btn btn-secondary" value="Detalhes">
+									</div>
+								</div>
+							</div>
+
+							<!-- 6 elemento -->
+							<div class="col-md-2">
+								<div class="card h-100">
+									<img src="img/img_amplificadores/guitarra_blackstar_ht5r_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Blackstar HT5R Valvulado">
+									<div class="card-body">
+										<h5 class="card-title">Guitarra Blackstar</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+										<input type="button" class="btn btn-primary" value="Comprar">
+										<input type="button" class="btn btn-secondary" value="Detalhes">
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col">
-					<div class="card h-100">
-						<img src="img/img_amplificadores/baixo_staner_bx200a.png" class="card-img-top" alt="Imagem do amplificador para baixo Staner BX200A">
-						<div class="card-body">
-							<h5 class="card-title">Baixo Staner BX200</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
-							<input type="button" class="btn btn-primary" value="Comprar">
-							<input type="button" class="btn btn-secondary" value="Detalhes">
-						</div>
-					</div>
 				</div>
-
-				<div class="col">
-					<div class="card h-100">
-						<img src="img/img_amplificadores/guitarra_blackstar_ht5r_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Blackstar HT5R Valvulado">
-						<div class="card-body">
-							<h5 class="card-title">Guitarra Blackstar</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
-							<input type="button" class="btn btn-primary" value="Comprar">
-							<input type="button" class="btn btn-secondary" value="Detalhes">
-						</div>
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="card h-100">
-						<img src="img/img_amplificadores/guitarra_marshall_code50_transistorizado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Marshall Code50 Transistorizado">
-						<div class="card-body">
-							<h5 class="card-title">Giutarra Marshall</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
-							<input type="button" class="btn btn-primary" value="Comprar">
-							<input type="button" class="btn btn-secondary" value="Detalhes">
-						</div>
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="card h-100">
-						<img src="img/img_amplificadores/guitarra_vox_ac15_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Vox AC15 Valvulado">
-						<div class="card-body">
-							<h5 class="card-title">Guitarra Vox AC15</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
-							<input type="button" class="btn btn-primary" value="Comprar">
-							<input type="button" class="btn btn-secondary" value="Detalhes">
-						</div>
-					</div>
-				</div>
+				<!-- Controles do Carrossel -->
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Anterior</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Proximo</span>
+				</button>
 			</div>
-
-			<div class="row row-cols-1 row-cols-md-6 g-2">
-				<div class="col">
-					<div class="card h-100">
-						<img src="img/img_amplificadores/baixo_staner_bx200a.png" class="card-img-top" alt="Imagem do amplificador para baixo Staner BX200A">
-						<div class="card-body">
-							<h5 class="card-title">Baixo Staner BX200a</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
-							<input type="button" class="btn btn-primary" value="Comprar">
-							<input type="button" class="btn btn-secondary" value="Detalhes">
-						</div>
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="card h-100">
-						<img src="img/img_amplificadores/baixo_ampeg_ba108.png" class="card-img-top" alt="Imagem do amplificador para baixo Ampeg BA108">
-						<div class="card-body">
-							<h5 class="card-title">Baixo Ampeg BA108</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
-							<input type="button" class="btn btn-primary" value="Comprar">
-							<input type="button" class="btn btn-secondary" value="Detalhes">
-						</div>
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="card h-100">
-						<img src="img/img_amplificadores/guitarra_vox_ac15_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Vox AC15 Valvulado">
-						<div class="card-body">
-							<h5 class="card-title">Guitarra Vox AC15</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
-							<input type="button" class="btn btn-primary" value="Comprar">
-							<input type="button" class="btn btn-secondary" value="Detalhes">
-						</div>
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="card h-100">
-						<img src="img/img_amplificadores/guitarra_vox_ac15_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Vox AC15 Valvulado">
-						<div class="card-body">
-							<h5 class="card-title">Giutarra Vox AC15</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
-							<input type="button" class="btn btn-primary" value="Comprar">
-							<input type="button" class="btn btn-secondary" value="Detalhes">
-						</div>
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="card h-100">
-						<img src="img/img_amplificadores/baixo_ampeg_ba108.png" class="card-img-top" alt="Imagem do amplificador para baixo Ampeg BA108">
-						<div class="card-body">
-							<h5 class="card-title">Baixo Ampeg BA108</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
-							<input type="button" class="btn btn-primary" value="Comprar">
-							<input type="button" class="btn btn-secondary" value="Detalhes">
-						</div>
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="card h-100">
-						<img src="img/img_amplificadores/guitarra_blackstar_ht5r_valvulado.png" class="card-img-top" alt="Imagem do amplificador para guitarra Blackstar HT5R Valvulado">
-						<div class="card-body">
-							<h5 class="card-title">Guitarra Blackstar</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
-							<input type="button" class="btn btn-primary" value="Comprar">
-							<input type="button" class="btn btn-secondary" value="Detalhes">
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- FIM DOS CARDS DE AMOSTRA -->
-
 		</div>
+		<!-- FIM DOS CARDS DE AMOSTRA -->
+
 		<div id="footer">
 			<div id="texto_institucional">
 				<p><a href="#">AMPLIFIC - CONTROL</a></p>
@@ -253,7 +290,7 @@ session_start();
 			</div>
 		</div>
 	</div>
-
+	
 	<!--CONEXAO COM O SCRIPT DO JAVASCRIPT-->
 	<!-- CONEXAO COM OS FRAMEWORKS -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
