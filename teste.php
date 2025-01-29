@@ -52,72 +52,82 @@
 </html>
     -->
 
-<!DOCTYPE html>
-<html lang="en">
 
+    <!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel com 6 Elementos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Logout com Spinner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        /* Efeito de escurecimento ao sair */
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+
+        /* Overlay do spinner cobrindo toda a tela */
+        #spinner {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        /* Estilizando o spinner */
+        .spinner-border {
+            width: 4rem;
+            height: 4rem;
+            color: white;
+        }
+    </style>
 </head>
+<body class="d-flex flex-column justify-content-center align-items-center vh-100">
 
-<body>
-    <div class="container my-5">
-        <h2 class="text-center mb-4">Carrossel de Amplificadores</h2>
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="card h-100">
-                                <img src="img/img_amplificadores/guitarra_marshall_code50_transistorizado.png" class="card-img-top" alt="Amplificador Marshall">
-                                <div class="card-body">
-                                    <h5 class="card-title">Guitarra Marshall</h5>
-                                    <p class="card-text">Amplificador Marshall Code50 Transistorizado.</p>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button class="btn btn-primary">Comprar</button>
-                                    <button class="btn btn-secondary">Detalhes</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Repetir o mesmo bloco para outros 5 elementos no slide -->
-                        <div class="col-md-2">[...]</div>
-                        <div class="col-md-2">[...]</div>
-                        <div class="col-md-2">[...]</div>
-                        <div class="col-md-2">[...]</div>
-                        <div class="col-md-2">[...]</div>
-                    </div>
-                </div>
+    <h2>Teste do Logout com Spinner</h2>
 
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <div class="row">
-                        <!-- Repetir com novos itens -->
-                        <div class="col-md-2">[...]</div>
-                        <div class="col-md-2">[...]</div>
-                        <div class="col-md-2">[...]</div>
-                        <div class="col-md-2">[...]</div>
-                        <div class="col-md-2">[...]</div>
-                        <div class="col-md-2">[...]</div>
-                    </div>
-                </div>
-            </div>
-            <!-- Controles do Carrossel -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+    <!-- Botão de Logout -->
+    <button id="logout-overlay" class="btn btn-danger mt-3">Sair</button> ok
+
+    <!-- Overlay do Spinner -->
+    <div id="spinner">
+        <div class="spinner-border text-light" role="status"></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script>
+        // Selecionando elementos
+        const logoutButton = document.getElementById("logout-overlay");
+        const spinnerOverlay = document.getElementById("spinner");
+        const body = document.body;
 
+        // Função para iniciar o logout com efeito
+        function handleLogout(event) {
+            event.preventDefault(); // Impede o redirecionamento imediato
+
+            // Ativar o spinner e a animação de saída
+            spinnerOverlay.style.display = "flex"; // Usa flex para centralizar
+            body.classList.add("fade-out");
+
+            // Prevenir múltiplos cliques
+            logoutButton.disabled = true;
+
+            // Aguarda a animação antes de redirecionar
+            setTimeout(() => {
+                window.location.href = "teste.php";
+            }, 2000); // 2 segundos para efeito
+        }
+
+        // Adiciona o evento de clique
+        logoutButton.addEventListener("click", handleLogout);
+    </script>
+
+</body>
 </html>

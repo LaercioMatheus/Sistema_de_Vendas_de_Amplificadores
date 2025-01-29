@@ -1,33 +1,37 @@
-/* Defina uma animação simples de fade-out */
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.fade-out {
-    animation: fadeOut 20s forwards;
-}
-
-/* Estilo para o spinner */
+/* Esse é os estilos do efeito de saída do site */
+/* Overlay cobrindo toda a tela */
 #spinner {
-    position: fixed;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #1d5981;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 5s linear infinite;
-    display: none; /* Esconde o spinner inicialmente */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.32);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  /* visibility: hidden; */
+  transition: opacity 0.5s ease-in-out;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+/* Spinner centralizado */
+/* Spinner estlizado */
+div .spinner-border {
+  width: 5rem;
+  height: 5rem;
+  color: #b8c0c7e0;
+}
+
+/* Ativar a exibição */
+.show-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Efeito de escurecimento ao sair */
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }

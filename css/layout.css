@@ -11,7 +11,6 @@ body * {
 }
 
 body {
-  /* Esse vai ser o background do sistema */
   background-image: linear-gradient(
     to top,
     lightgrey 0%,
@@ -21,28 +20,28 @@ body {
     #d9d9d9 75%,
     #bcbcbc 100%
   );
+  display: flex;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 /*div container*/
 #container_global {
   /* background-color: #e4e0e0; */
   /* background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%); */
-
   /* background-image: linear-gradient(to left, #bdbbbe 0%, #9d9ea3 100%),
     radial-gradient(
       88% 271%,
       rgba(255, 255, 255, 0.25) 0%,
       rgba(254, 254, 254, 0.25) 1%,
       rgba(0, 0, 0, 0.25) 100%
-    ),
-    radial-gradient(
+    ), radial-gradient(
       50% 100%,
       rgba(255, 255, 255, 0.3) 0%,
       rgba(0, 0, 0, 0.3) 100%
-    );
-  background-blend-mode: normal, lighten, soft-light; */
-
-  /*  */
+    );  background-blend-mode: normal, lighten, soft-light; */
+  display: flex;
+  flex-direction: column;
   padding: 5px;
   width: 100%;
   max-width: 100%;
@@ -52,7 +51,7 @@ body {
 #nav_header {
   padding: 5px;
   position: relative;
-  height: 150px;
+  height: auto;
   margin-bottom: 10px;
   border-radius: 5px;
   border: solid #6c757d;
@@ -110,6 +109,7 @@ body {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
+  flex: 1;
 }
 
 /* Estilos das divs de amostra dos amplificadores */

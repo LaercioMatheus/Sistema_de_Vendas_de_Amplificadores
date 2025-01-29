@@ -1,14 +1,24 @@
-document.getElementById('logout-btn').addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o redirecionamento imediato
+// Selecionando elementos
+const logoutButton = document.getElementById("logout-overlay");
+const spinnerOverlay = document.getElementById("spinner");
+const body = document.body;
 
-    // Mostra o spinner
-    document.getElementById('spinner').style.display = 'block';
+// Função para iniciar o logout com efeito
+function handleLogout(event) {
+  event.preventDefault(); // Impede o redirecionamento imediato
 
-    // Adiciona a classe de animação ao corpo ou a outro elemento
-    document.body.classList.add('fade-out');
+  // Ativar o spinner e a animação de saída
+  spinnerOverlay.style.display = "flex"; // Usa flex para centralizar
+  body.classList.add("fade-out");
 
-    // Aguarda a animação terminar (1 segundo neste caso) antes de redirecionar
-    setTimeout(function() {
-        window.location.href = 'logout.php';
-    }, 2000); // 1 segundo = 1000 milissegundos
-});
+  // Prevenir múltiplos cliques
+  logoutButton.disabled = true;
+
+  // Aguarda a animação antes de redirecionar
+  setTimeout(() => {
+    window.location.href = "index.php";
+  }, 10000); // 2 segundos para efeito
+}
+
+// Adiciona o evento de clique
+logoutButton.addEventListener("click", handleLogout);

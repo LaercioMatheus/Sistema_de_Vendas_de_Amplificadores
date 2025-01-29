@@ -279,6 +279,16 @@ session_start();
 		</div>
 		<!-- FIM DOS CARDS DE AMOSTRA -->
 
+		<!-- Essa é a parte de teste para o efeito de saída do sistema -->
+		<!-- Div do efeito do site quando o usuario sair -->
+		<div class="text-center">
+			<div class="exit-overlay" id="spinner">
+				<div class="spinner-border text-light md-5" role="status">
+					<span class="visually-hidden">Saindo...</span>
+				</div>
+			</div>
+		</div>
+
 		<div id="footer">
 			<div id="texto_institucional">
 				<p><a href="#">AMPLIFIC - CONTROL</a></p>
@@ -290,7 +300,7 @@ session_start();
 			</div>
 		</div>
 	</div>
-	
+
 	<!--CONEXAO COM O SCRIPT DO JAVASCRIPT-->
 	<!-- CONEXAO COM OS FRAMEWORKS -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
