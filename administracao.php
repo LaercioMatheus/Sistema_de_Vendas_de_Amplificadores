@@ -33,41 +33,54 @@ session_start();
 			<!--PARTE DO MENU DO SITE-->
 			<nav class="navbar_menu">
 				<?php include "menu_local.php"; ?>
+
 				<!-- Spinner de Carregamento -->
-				<div id="spinner"></div>
+				<!-- Div do efeito do site quando o usuario sair -->
+				<div class="text-center">
+					<div id="spinner" class="show-overlay">
+						<div class="spinner-border md-5" role="status">
+							<span class="visually-hidden">Saindo...</span>
+						</div>
+					</div>
+				</div>
 			</nav>
 
 			<!--COMEÇO DOS ESTILOS DO MENU RESPONSIVO-->
-			<nav class="mobile-menu">
-
+			<nav class="mobile_menu">
 				<!--ICONE DO MENU RESPONSIVO-->
-				<div class="button-mobile">
-					<div class="line1"></div>
-					<div class="line2"></div>
-					<div class="line3"></div>
+				<div class="button_mobile">
+					<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileArea" aria-controls="mobileArea"><img src="img/img_project/menu-fechado.png" alt="#" srcset=""></button>
 				</div>
 
-				<nav class="nav-list">
-					<!--INCLUDE DA CREDENCIAL-->
-					<span class="credention"> Olá <?php include "valida_login.php"; ?></span>
-					<!--INCLUDE DO MENU-->
-					<?php include "menu_local.php"; ?>
-				</nav>
+				<!-- Essa é a div que irá mostrar o menu vindo do lado de fora da tela -->
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileArea" aria-labelledby="mobileAreaLabel">
+					<div class="offcanvas-header">
+						<!-- Titulo do menu lateral -->
+						<h5 class="offcanvas-title" id="mobileAreaRightLabel">Olá <?php include "valida_login.php"; ?></h5>
+
+						<!-- Botão para recolher o menu lateral -->
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+
+					<!-- Parte do menu sendo mostrada (corpo da div lateral) -->
+					<div class="offcanvas-body">
+						<!--Incluindo o menu nesse arquivo para não repetir o mesmo código do menu -->
+						<?php include "menu_local.php"; ?>
+					</div>
+				</div>
 			</nav>
+			<!-- FIM DO MENU RESPONSIVO -->
 		</header>
-		<!--OS breadcrumb DO SITE-->
+		<!--Os breadcrumb são os links de navegação-->
 		<?php include "breadcrumb.php"; ?>
 
 		<div id="conteudo_especifico">
 			<!-- <h2>Sistema de Controle de Estoque e Venda de Amplificadores da <strong>Rock N´ Rol Amplificadores</strong></h2> -->
 
-			<h3>Amplific Control - <strong>Rock N´ Rol Amplificadores</strong></h3>
+			<h3 class="title_response">Amplific Control - <strong>Rock N´ Rol Amplificadores</strong></h3>
 
 			<!-- CARDS PARA MOSTRAR OS AMPLIFICADORES PARA A VENDA, OS MAIS VENDIDOS ETC -->
 			<!-- TENHO QUE IMPLEMENTAR ESSA PARTE DE MOSTRAR OS AMPLIFICADORES DINAMICAMENTE JUNTO COM O BANCO DE DADOS -->
-			<!-- JUNTO COM UMA ROLAGEM LATERAL PARA FICAR PASSANDO DO LONGO DO TEMPO -->
-			<!-- ESSA PARTE DEVE SER FEITA EM PHP -->
-
 			<!-- Inicio da amostra dos elemtos do sistema -->
 			<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
 				<div class="carousel-inner">
@@ -84,7 +97,7 @@ session_start();
 										<h5 class="card-title">Giutarra Marshall</h5>
 										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									</div>
-									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+									<div class="card-footer text-center d-grid justify-content-md-center">
 										<input type="button" class="btn btn-primary" value="Comprar">
 										<input type="button" class="btn btn-secondary" value="Detalhes">
 									</div>
@@ -99,7 +112,7 @@ session_start();
 										<h5 class="card-title">Baixo Ampeg BA110</h5>
 										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									</div>
-									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+									<div class="card-footer text-center d-grid justify-content-md-center">
 										<input type="button" class="btn btn-primary" value="Comprar">
 										<input type="button" class="btn btn-secondary" value="Detalhes">
 									</div>
@@ -115,7 +128,7 @@ session_start();
 										<h5 class="card-title">Baixo Staner BX200</h5>
 										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									</div>
-									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+									<div class="card-footer text-center d-grid justify-content-md-center">
 										<input type="button" class="btn btn-primary" value="Comprar">
 										<input type="button" class="btn btn-secondary" value="Detalhes">
 									</div>
@@ -130,7 +143,7 @@ session_start();
 										<h5 class="card-title">Guitarra Blackstar</h5>
 										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									</div>
-									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+									<div class="card-footer text-center d-grid justify-content-md-center">
 										<input type="button" class="btn btn-primary" value="Comprar">
 										<input type="button" class="btn btn-secondary" value="Detalhes">
 									</div>
@@ -145,7 +158,7 @@ session_start();
 										<h5 class="card-title">Giutarra Marshall</h5>
 										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									</div>
-									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+									<div class="card-footer text-center d-grid justify-content-md-center">
 										<input type="button" class="btn btn-primary" value="Comprar">
 										<input type="button" class="btn btn-secondary" value="Detalhes">
 									</div>
@@ -160,7 +173,7 @@ session_start();
 										<h5 class="card-title">Guitarra Vox AC15</h5>
 										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									</div>
-									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+									<div class="card-footer text-center d-grid justify-content-md-center">
 										<input type="button" class="btn btn-primary" value="Comprar">
 										<input type="button" class="btn btn-secondary" value="Detalhes">
 									</div>
@@ -168,7 +181,6 @@ session_start();
 							</div>
 						</div>
 					</div>
-
 
 					<!-- Slide 2 -->
 					<div class="carousel-item">
@@ -181,7 +193,7 @@ session_start();
 										<h5 class="card-title">Baixo Staner BX200a</h5>
 										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									</div>
-									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+									<div class="card-footer text-center d-grid justify-content-md-center">
 										<input type="button" class="btn btn-primary" value="Comprar">
 										<input type="button" class="btn btn-secondary" value="Detalhes">
 									</div>
@@ -196,7 +208,7 @@ session_start();
 										<h5 class="card-title">Baixo Ampeg BA108</h5>
 										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									</div>
-									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+									<div class="card-footer text-center d-grid justify-content-md-center">
 										<input type="button" class="btn btn-primary" value="Comprar">
 										<input type="button" class="btn btn-secondary" value="Detalhes">
 									</div>
@@ -211,7 +223,7 @@ session_start();
 										<h5 class="card-title">Guitarra Vox AC15</h5>
 										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									</div>
-									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+									<div class="card-footer text-center d-grid justify-content-md-center">
 										<input type="button" class="btn btn-primary" value="Comprar">
 										<input type="button" class="btn btn-secondary" value="Detalhes">
 									</div>
@@ -226,7 +238,7 @@ session_start();
 										<h5 class="card-title">Giutarra Vox AC15</h5>
 										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									</div>
-									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+									<div class="card-footer text-center d-grid justify-content-md-center">
 										<input type="button" class="btn btn-primary" value="Comprar">
 										<input type="button" class="btn btn-secondary" value="Detalhes">
 									</div>
@@ -241,7 +253,7 @@ session_start();
 										<h5 class="card-title">Baixo Ampeg BA108</h5>
 										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									</div>
-									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+									<div class="card-footer text-center d-grid justify-content-md-center">
 										<input type="button" class="btn btn-primary" value="Comprar">
 										<input type="button" class="btn btn-secondary" value="Detalhes">
 									</div>
@@ -256,7 +268,7 @@ session_start();
 										<h5 class="card-title">Guitarra Blackstar</h5>
 										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									</div>
-									<div class="card-footer text-center d-grid gap-2 d-md-flex justify-content-md-center">
+									<div class="card-footer text-center d-grid justify-content-md-center">
 										<input type="button" class="btn btn-primary" value="Comprar">
 										<input type="button" class="btn btn-secondary" value="Detalhes">
 									</div>
@@ -278,16 +290,6 @@ session_start();
 			</div>
 		</div>
 		<!-- FIM DOS CARDS DE AMOSTRA -->
-
-		<!-- Essa é a parte de teste para o efeito de saída do sistema -->
-		<!-- Div do efeito do site quando o usuario sair -->
-		<div class="text-center">
-			<div class="exit-overlay" id="spinner">
-				<div class="spinner-border text-light md-5" role="status">
-					<span class="visually-hidden">Saindo...</span>
-				</div>
-			</div>
-		</div>
 
 		<div id="footer">
 			<div id="texto_institucional">

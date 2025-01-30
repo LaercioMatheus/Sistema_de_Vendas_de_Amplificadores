@@ -57,7 +57,7 @@ body {
   border: solid #6c757d;
 }
 
-/*CONTAINER PARA O PARAGRAFO AO LADO DO LOGO DO SITE */
+/*container para o paragrafo ao lado do logo do sistema */
 #header_main {
   display: flex;
   justify-content: space-between;
@@ -72,7 +72,7 @@ body {
   margin: 5px 5px 0 0;
 }
 
-/*STILOS DOS breadcrumb DO SITE*/
+/*estilos dos breadcrumb do sistema*/
 .nav_breadcrumb {
   margin-bottom: 10px;
   display: flex;
@@ -104,7 +104,7 @@ body {
   color: #6c757d;
 }
 
-/* div CONTEUDO_ESPECIFICO  */
+/* estilos da div do conteudo especifico  */
 #conteudo_especifico {
   display: flex;
   flex-direction: column;
@@ -115,6 +115,11 @@ body {
 /* Estilos das divs de amostra dos amplificadores */
 div .row {
   margin-top: 2rem;
+}
+
+/* Espacamento entre os cards das amostras dos elementos da página inicial */
+div .col-md-2 {
+  padding: 5px;
 }
 
 /* div dos cards para regular o tamanho das imagens */
@@ -129,10 +134,12 @@ div .card-text {
   color: rgb(33 37 41 / 80%);
 }
 
+/* Os botões de ver a informação dos produtos e de vender os produtos  */
 div .btn {
   margin: 0.3rem 0 0.3rem 0;
 }
 
+/* Estilos do carrossel de amostra dos produtos */
 div .carousel-control-prev,
 div .carousel-control-next {
   background-color: #0000008c;
@@ -146,7 +153,7 @@ div .carousel-control-next {
   padding-left: 1rem;
 } */
 
-/*table STILO DA TABELA DE INFORMAÇÕES DO SITE*/
+/* Estilos da tabela de informações do sistema */
 table {
   text-align: center;
   font-size: 13pt;
@@ -178,120 +185,77 @@ table {
   text-align: center;
 }
 
-/*Styles de responsividade. PARA O MENU QUEBRAR É PRECISO 1045px*/
-.nav-list {
+/* Estilos do menu mobile (responsividade)*/
+.nav_list {
   display: none;
 }
 
-body {
-  overflow-x: hidden;
-}
-
-.button-mobile div {
-  width: 32px;
-  height: 3px;
-  background-color: #1a1c1d;
-  margin: 8px;
-  display: none;
-  transition: 0.3s;
-}
-.button-mobile {
+.button_mobile {
   position: absolute;
   cursor: pointer;
   right: 10px;
   top: 10px;
 }
 
-/*MEDIA QUERY DA RESPONSIVIDADE*/
-@media (max-width: 900px) {
-  .button-mobile div {
+/* Escondendo o menu na tela maior que 920px */
+@media (min-width: 920px) {
+  .mobile_menu {
+    display: none;
+  }
+}
+
+/* MEDIA QUERY DA RESPONSIVIDADE */
+@media (max-width: 919px) {
+  .button_mobile {
     display: block;
   }
-  /*ESCONDENDO O MENU E A CREDENCIAL*/
-  .navbar,
-  #cred_global {
+
+  /* ESCONDENDO o MENU e a CREDENCIAL */
+  #identification_user {
     display: none;
   }
 
-  /*SE ALGO TRANSBORDA DA TELA ELE VAI FICAR ESCONDIDO PELO BODY*/
-  body {
-    overflow-x: hidden;
-  }
-
-  .nav-list {
-    display: flex;
-    position: absolute;
-    top: 7vh;
-    right: -10vh;
-    width: 50vw;
-    height: 65vh;
-    background-color: #23232e;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .nav-list li {
-    margin-left: 0px;
-    opacity: 0;
-    margin-top: 20px;
-  }
-
-  /*ACTIVE É A CLASSE QUE VAI SER CRIADADA PELO JAVASCRIPT*/
-  .nav-list.active {
-    transform: translateX(0);
-  }
-
-  .credention {
-    display: flex;
-    position: absolute;
-    top: 5px;
-    left: 60px;
-    color: #e6e6fadb;
-  }
-
-  .mobile-menu {
-    margin: 10px;
-  }
-
-  .mobile-menu ul {
-    position: absolute;
-    left: 8.5rem;
+  /* Estilos da lista do menu */
+  .mobile_menu ul {
     padding: 0;
     margin: 0;
     list-style: none;
   }
 
-  .mobile-menu a {
+  /* Estilos dos links do menu */
+  .mobile_menu a {
+    display: flex;
     text-decoration: none;
-    color: #5085e3a6;
-  }
-
-  /*O 'navLinkFade' É O NOME DO EFEITO NA HORA DE APARECER O MENU*/
-  /*A OPACIDADE VAI DE (from) ZERO PARA (to) UM*/
-  /*O 'translateX(50px)' É O EFEITO DE CHEGADA DEVAGAR (o nome 'Fade') DA ESQUERDA PARA A DOREITA*/
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    color: #000000bd;
+    margin: 10px;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    border: 1px solid;
+    border-radius: 15px;
   }
 }
 
-.button-mobile.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
+/* Esse é o estilo de responsividade dos breadcrum */
+@media (max-width: 540px) {
+  .nav_breadcrumb {
+    margin-bottom: 10px;
+    display: flex;
+    padding: 0.3rem 1rem;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.button-mobile.active .line2 {
-  opacity: 0;
-}
-
-.button-mobile.active .line3 {
-  transform: rotate(45deg) translate(-7px, -7px);
+/* Estilos de responsividade do título da página inicial */
+@media (max-width: 500px) {
+  .title_response {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }

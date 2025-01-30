@@ -14,12 +14,17 @@
     cursor: pointer;
 }
 
-
 .navbar_menu {
     display: flex;
     position: relative;
     justify-content: space-between;
     padding: 10px 0px;
+}
+
+@media (max-width: 920px) {
+    .navbar_menu {
+        display: none;
+    }
 }
 
 .navbar_menu a {

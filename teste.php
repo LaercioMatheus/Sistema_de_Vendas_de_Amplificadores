@@ -53,8 +53,9 @@
     -->
 
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,6 +91,7 @@
         }
     </style>
 </head>
+
 <body class="d-flex flex-column justify-content-center align-items-center vh-100">
 
     <h2>Teste do Logout com Spinner</h2>
@@ -98,8 +100,16 @@
     <button id="logout-overlay" class="btn btn-danger mt-3">Sair</button> ok
 
     <!-- Overlay do Spinner -->
-    <div id="spinner">
+    <!-- <div id="spinner">
         <div class="spinner-border text-light" role="status"></div>
+    </div> -->
+
+    <div class="text-center">
+        <div id="spinner" class="show-overlay">
+            <div class="spinner-border text-light md-5" role="status">
+                <span class="visually-hidden">Saindo...</span>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -130,4 +140,5 @@
     </script>
 
 </body>
+
 </html>

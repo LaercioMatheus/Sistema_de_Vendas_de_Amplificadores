@@ -7,9 +7,8 @@ const body = document.body;
 function handleLogout(event) {
   event.preventDefault(); // Impede o redirecionamento imediato
 
-  // Ativar o spinner e a animação de saída
+  // Ativar o spinner
   spinnerOverlay.style.display = "flex"; // Usa flex para centralizar
-  body.classList.add("fade-out");
 
   // Prevenir múltiplos cliques
   logoutButton.disabled = true;
