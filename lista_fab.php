@@ -33,105 +33,121 @@ session_start();
 			<!--PARTE DO MENU DO SITE-->
 			<nav class="navbar_menu">
 				<?php include "menu_local.php"; ?>
+
 				<!-- Spinner de Carregamento -->
-				<div id="spinner"></div>
+				<!-- Div do efeito do site quando o usuario sair -->
+				<div class="text-center">
+					<div id="spinner" class="show-overlay">
+						<div class="spinner-border md-5" role="status">
+							<span class="visually-hidden">Saindo...</span>
+						</div>
+					</div>
+				</div>
 			</nav>
 
 			<!--COMEÇO DOS ESTILOS DO MENU RESPONSIVO-->
-			<nav class="mobile-menu">
-
+			<nav class="mobile_menu">
 				<!--ICONE DO MENU RESPONSIVO-->
-				<div class="button-mobile">
-					<div class="line1"></div>
-					<div class="line2"></div>
-					<div class="line3"></div>
+				<div class="button_mobile">
+					<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileArea" aria-controls="mobileArea"><img src="img/img_project/menu-fechado.png" alt="#" srcset=""></button>
 				</div>
 
-				<nav class="nav-list">
-					<!--INCLUDE DA CREDENCIAL-->
-					<span class="credention"> Olá <?php include "valida_login.php"; ?></span>
-					<!--INCLUDE DO MENU-->
-					<?php include "menu_local.php"; ?>
-				</nav>
+				<!-- Essa é a div que irá mostrar o menu vindo do lado de fora da tela -->
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileArea" aria-labelledby="mobileAreaLabel">
+					<div class="offcanvas-header">
+						<!-- Titulo do menu lateral -->
+						<h5 class="offcanvas-title" id="mobileAreaRightLabel">Olá <?php include "valida_login.php"; ?></h5>
+
+						<!-- Botão para recolher o menu lateral -->
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+
+					<!-- Parte do menu sendo mostrada (corpo da div lateral) -->
+					<div class="offcanvas-body">
+						<!--Incluindo o menu nesse arquivo para não repetir o mesmo código do menu -->
+						<?php include "menu_local.php"; ?>
+					</div>
+				</div>
 			</nav>
+			<!-- FIM DO MENU RESPONSIVO -->
 
 		</header>
 		<!--OS breadcrumb DO SITE-->
 		<?php include "breadcrumb.php"; ?>
 
 		<div id="conteudo_especifico">
-			<div class="table-container">
+			<div class="table_container">
 
 				<?php
 				//CONECCAO COM O BANCO DE DADOS
 				$conectar = mysqli_connect("localhost", "root", "", "35936x");
 				//PESQUISANDO OS DADOS DENTRO DO BANCO DE DADOS
 				$sql_pesquisa = "SELECT
-															Cod_FAB, Nome_FAB, Endereco_FAB, Telefone_FAB, Encarregado_Vendas_FAB, Produto_FAB, Empresa_FAB
-											FROM
-												fabricantes";
+									Cod_FAB, Nome_FAB, Endereco_FAB, Telefone_FAB, Encarregado_Vendas_FAB, Produto_FAB, Empresa_FAB
+								FROM
+									fabricantes";
 
 				#ONDE ESTA A TABELA VINDA DO BANCO DE DADOS
 				$sql_resultado = mysqli_query($conectar, $sql_pesquisa);
 				?>
 
-				<table class="table table-striped table-hover caption-top table-md align-middle shadow p-3 mb-5 bg-body-tertiary rounded">
-					<caption>
-						<h3>Lista de fornecedores</h3>
-					</caption>
+				<!-- Botão para cadastrar um novo funcionário -->
+				<div class="d-md-flex justify-content-md-end">
+					<a class="action btn btn-outline-success" href="cadastra_fab.php">Cadastrar fabricantes</a>
+				</div>
 
-					<!-- Botão para cadastrar um novo funcionário -->
-					<div class="d-grid d-md-flex justify-content-md-end">
-						<a class="action btn btn-outline-success" href="cadastra_fab.php">Cadastrar fabricantes</a>
-					</div>
-					<thead>
-						<tr>
-							<th>NOME DO FABRICANTE</th>
-							<th>ENDEREÇO</th>
-							<th>NOME DO ENCARREGADO</th>
-							<th>AMPLIFICADORES FORNECIDOS</th>
-							<th>AÇÃO</th>
-						</tr>
-					</thead>
-					<tbody class="table-group-divider">
-						<?php
-						while ($registro = mysqli_fetch_row($sql_resultado)) {
-						?>
+				<!-- Tabela de amostra de fornecedores -->
+				<div class="table-responsive">
+					<table class="table table-striped table-hover caption-top table-md align-middle shadow p-3 mb-5 bg-body-tertiary rounded">
+						<caption>
+							<h3>Lista de fornecedores</h3>
+						</caption>
+						<thead>
 							<tr>
-								<!--NOME-->
-								<td>
-									<!--ISSO CASO ESSE LINHA DA TABELA FOR UM LINK-->
-									<?php echo $registro[1]; ?>
-								</td>
-
-								<!--ENDERECO-->
-								<td>
-									<?php echo $registro[2]; ?>
-								</td>
-
-								<!--NOME ENCARREGADO-->
-								<td>
-									<?php echo $registro[4]; ?>
-								</td>
-
-								<!--PRODUTOS-->
-								<td>
-									<?php echo $registro[5]; ?>
-								</td>
-
-								<!--ACAO-->
-								<td>
-									<div class="d-grid gap-2 d-md-block">
-										<a class="btn btn-warning" href="altera_fab.php?codigo=<?php echo $registro[0]; ?>"><i class="fas fa-edit"></i></a>
-										<a class="btn btn-secondary" href="exibe_fab.php?codigo=<?php echo $registro[0]; ?>"><i class="fas fa-info"></i></a>
-									</div>
-								</td>
+								<th>NOME DO FABRICANTE</th>
+								<th>ENDEREÇO</th>
+								<th>NOME DO ENCARREGADO</th>
+								<th>AMPLIFICADORES FORNECIDOS</th>
+								<th>AÇÃO</th>
 							</tr>
-						<?php
-						}
-						?>
-					</tbody>
-				</table>
+						</thead>
+						<tbody class="table-group-divider">
+							<?php
+							while ($registro = mysqli_fetch_row($sql_resultado)) {
+							?>
+								<tr>
+									<!--NOME-->
+									<td>
+										<!--ISSO CASO ESSE LINHA DA TABELA FOR UM LINK-->
+										<?php echo $registro[1]; ?>
+									</td>
+									<!--ENDERECO-->
+									<td>
+										<?php echo $registro[2]; ?>
+									</td>
+									<!--NOME ENCARREGADO-->
+									<td>
+										<?php echo $registro[4]; ?>
+									</td>
+									<!--PRODUTOS-->
+									<td>
+										<?php echo $registro[5]; ?>
+									</td>
+									<!--ACAO-->
+									<td>
+										<div class="d-grid gap-2 d-md-block">
+											<a class="btn btn-warning" href="altera_fab.php?codigo=<?php echo $registro[0]; ?>"><i class="fas fa-edit"></i></a>
+											<a class="btn btn-secondary" href="exibe_fab.php?codigo=<?php echo $registro[0]; ?>"><i class="fas fa-info"></i></a>
+										</div>
+									</td>
+								</tr>
+							<?php
+							}
+							?>
+						</tbody>
+					</table>
+					<!-- fim da tabela de fornecedores -->
+				</div>
 			</div>
 		</div>
 		<div id="footer">

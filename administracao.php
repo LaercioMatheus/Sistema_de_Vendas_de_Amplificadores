@@ -70,6 +70,7 @@ session_start();
 				</div>
 			</nav>
 			<!-- FIM DO MENU RESPONSIVO -->
+
 		</header>
 		<!--Os breadcrumb são os links de navegação-->
 		<?php include "breadcrumb.php"; ?>
@@ -82,7 +83,7 @@ session_start();
 			<!-- CARDS PARA MOSTRAR OS AMPLIFICADORES PARA A VENDA, OS MAIS VENDIDOS ETC -->
 			<!-- TENHO QUE IMPLEMENTAR ESSA PARTE DE MOSTRAR OS AMPLIFICADORES DINAMICAMENTE JUNTO COM O BANCO DE DADOS -->
 			<!-- Inicio da amostra dos elemtos do sistema -->
-			<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+			<div id="carousel" class="carousel slide" data-bs-ride="carousel">
 				<div class="carousel-inner">
 
 					<!-- Slide 1 -->
@@ -279,11 +280,11 @@ session_start();
 
 				</div>
 				<!-- Controles do Carrossel -->
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+				<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="visually-hidden">Anterior</span>
 				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+				<button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="visually-hidden">Proximo</span>
 				</button>

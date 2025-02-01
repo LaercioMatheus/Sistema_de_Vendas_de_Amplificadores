@@ -88,7 +88,7 @@ body {
 }
 
 .breadcrumb-item > a,
-#texto_institucional a {
+#texto_institucional a, .ancle_form a {
   color: #151a58;
   text-decoration: underline;
   background-color: transparent;

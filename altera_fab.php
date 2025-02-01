@@ -8,7 +8,7 @@ session_start();
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Alterar Usuários</title>
+	<title>Alterar Fornecedores</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
@@ -34,27 +34,43 @@ session_start();
 			<!--PARTE DO MENU DO SITE-->
 			<nav class="navbar_menu">
 				<?php include "menu_local.php"; ?>
+
 				<!-- Spinner de Carregamento -->
-				<div id="spinner"></div>
+				<!-- Div do efeito do site quando o usuario sair -->
+				<div class="text-center">
+					<div id="spinner" class="show-overlay">
+						<div class="spinner-border md-5" role="status">
+							<span class="visually-hidden">Saindo...</span>
+						</div>
+					</div>
+				</div>
 			</nav>
 
 			<!--COMEÇO DOS ESTILOS DO MENU RESPONSIVO-->
-			<nav class="mobile-menu">
-
+			<nav class="mobile_menu">
 				<!--ICONE DO MENU RESPONSIVO-->
-				<div class="button-mobile">
-					<div class="line1"></div>
-					<div class="line2"></div>
-					<div class="line3"></div>
+				<div class="button_mobile">
+					<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileArea" aria-controls="mobileArea"><img src="img/img_project/menu-fechado.png" alt="#" srcset=""></button>
 				</div>
 
-				<nav class="nav-list">
-					<!--INCLUDE DA CREDENCIAL-->
-					<span class="credention"> Olá <?php include "valida_login.php"; ?></span>
-					<!--INCLUDE DO MENU-->
-					<?php include "menu_local.php"; ?>
-				</nav>
+				<!-- Essa é a div que irá mostrar o menu vindo do lado de fora da tela -->
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileArea" aria-labelledby="mobileAreaLabel">
+					<div class="offcanvas-header">
+						<!-- Titulo do menu lateral -->
+						<h5 class="offcanvas-title" id="mobileAreaRightLabel">Olá <?php include "valida_login.php"; ?></h5>
+
+						<!-- Botão para recolher o menu lateral -->
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+
+					<!-- Parte do menu sendo mostrada (corpo da div lateral) -->
+					<div class="offcanvas-body">
+						<!--Incluindo o menu nesse arquivo para não repetir o mesmo código do menu -->
+						<?php include "menu_local.php"; ?>
+					</div>
+				</div>
 			</nav>
+			<!-- FIM DO MENU RESPONSIVO -->
 		</header>
 		<!--OS breadcrumb DO SITE-->
 		<?php include "breadcrumb.php"; ?>
@@ -89,8 +105,6 @@ session_start();
 
 				<form method="post" action="processa_altera_fab.php" id="form" class="form">
 					<input type="hidden" name="codigo" value="<?php echo $cod; ?>">
-
-
 					<div class="form_control">
 						<label for="nome">Nome Completo: </label>
 						<input type="text" id="nome" name="nome" value="<?php echo $registro[0]; ?>" required>
@@ -101,8 +115,6 @@ session_start();
 						<small>Mensagem de erro</small>
 					</div>
 
-
-
 					<div class="form_control">
 						<label for="endereco">Endereço: </label>
 						<input type="text" id="endereco" name="endereco" value="<?php echo $registro[1]; ?>" required>
@@ -112,6 +124,7 @@ session_start();
 
 						<small>Mensagem de erro</small>
 					</div>
+
 					<div class="form_control">
 						<label for="telefone">Telefone: </label>
 						<input type="text" id="telefone" name="telefone" value="<?php echo $registro[2]; ?>" required>
@@ -121,6 +134,7 @@ session_start();
 
 						<small>Mensagem de erro</small>
 					</div>
+
 					<div class="form_control">
 						<label for="nome_enc">Nome do Encarregado: </label>
 						<input type="text" id="nome_enc" name="nome_enc" value="<?php echo $registro[3]; ?>" required>
@@ -130,32 +144,41 @@ session_start();
 
 						<small>Mensagem de erro</small>
 					</div>
+
 					<div class="form_control" id="style_funcao">
-						<label for="guitarra">Tipo de amplificador: </label>
-						<label for="guitarra">Guitarra </label>
-						<input type="radio" name="produto" value="guitarra" id="guitarra"
-							<?php
-							if ($registro[4] == "guitarra") {
-								echo "checked";
-							}
-							?>>
+						<label for="guitarra">Tipo de amplificador:</label>
 
-						<label for="baixo">Baixo </label>
-						<input type="radio" name="produto" value="baixo" id="baixo"
-							<?php
-							if ($registro[4] == "baixo") {
-								echo "checked";
-							}
-							?>>
+						<div class="form-check form-check-inline">
+							<label id="form_radio" for="guitarra">Guitarra </label>
+							<input type="radio" name="produto" value="guitarra" id="guitarra"
+								<?php
+								if ($registro[4] == "guitarra") {
+									echo "checked";
+								}
+								?>>
+						</div>
 
-						<label for="violao">Violão </label>
-						<input type="radio" name="produto" value="violao" id="violao"
-							<?php
-							if ($registro[4] == "violao") {
-								echo "checked";
-							}
-							?>>
+						<div class="form-check form-check-inline">
+							<label id="form_radio" for="baixo">Baixo </label>
+							<input type="radio" name="produto" value="baixo" id="baixo"
+								<?php
+								if ($registro[4] == "baixo") {
+									echo "checked";
+								}
+								?>>
+						</div>
+
+						<div class="form-check form-check-inline">
+							<label id="form_radio" for="violao">Violão </label>
+							<input type="radio" name="produto" value="violao" id="violao"
+								<?php
+								if ($registro[4] == "violao") {
+									echo "checked";
+								}
+								?>>
+						</div>
 					</div>
+
 					<div class="form_control">
 						<label for="nome_emp">Nome da Empresa: </label>
 						<input type="text" id="nome_emp" name="nome_emp" value="<?php echo $registro[5]; ?>" required>

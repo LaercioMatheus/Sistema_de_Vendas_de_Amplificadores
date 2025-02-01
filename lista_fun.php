@@ -33,27 +33,44 @@ session_start();
 			<!--PARTE DO MENU DO SITE-->
 			<nav class="navbar_menu">
 				<?php include "menu_local.php"; ?>
+
 				<!-- Spinner de Carregamento -->
-				<div id="spinner"></div>
+				<!-- Div do efeito do site quando o usuario sair -->
+				<div class="text-center">
+					<div id="spinner" class="show-overlay">
+						<div class="spinner-border md-5" role="status">
+							<span class="visually-hidden">Saindo...</span>
+						</div>
+					</div>
+				</div>
 			</nav>
 
 			<!--COMEÇO DOS ESTILOS DO MENU RESPONSIVO-->
-			<nav class="mobile-menu">
-
+			<nav class="mobile_menu">
 				<!--ICONE DO MENU RESPONSIVO-->
-				<div class="button-mobile">
-					<div class="line1"></div>
-					<div class="line2"></div>
-					<div class="line3"></div>
+				<div class="button_mobile">
+					<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileArea" aria-controls="mobileArea"><img src="img/img_project/menu-fechado.png" alt="#" srcset=""></button>
 				</div>
 
-				<nav class="nav-list">
-					<!--INCLUDE DA CREDENCIAL-->
-					<span class="credention"> Olá <?php include "valida_login.php"; ?></span>
-					<!--INCLUDE DO MENU-->
-					<?php include "menu_local.php"; ?>
-				</nav>
+				<!-- Essa é a div que irá mostrar o menu vindo do lado de fora da tela -->
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileArea" aria-labelledby="mobileAreaLabel">
+					<div class="offcanvas-header">
+						<!-- Titulo do menu lateral -->
+						<h5 class="offcanvas-title" id="mobileAreaRightLabel">Olá <?php include "valida_login.php"; ?></h5>
+
+						<!-- Botão para recolher o menu lateral -->
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+
+					<!-- Parte do menu sendo mostrada (corpo da div lateral) -->
+					<div class="offcanvas-body">
+						<!--Incluindo o menu nesse arquivo para não repetir o mesmo código do menu -->
+						<?php include "menu_local.php"; ?>
+					</div>
+				</div>
 			</nav>
+			<!-- FIM DO MENU RESPONSIVO -->
+
 		</header>
 		<!--OS breadcrumb DO SITE-->
 		<?php include "breadcrumb.php"; ?>
@@ -76,62 +93,55 @@ session_start();
 				$sql_resultado = mysqli_query($conectar, $sql_pesquisa);
 				?>
 
-				<!-- Tabela de dados dos funcionários -->
-	<table class="table table-striped table-hover caption-top table-md align-middle shadow p-3 mb-5 bg-body-tertiary rounded">
-					<caption>
-						<h3>Lista de funcionários</h3>
-					</caption>
+				<!-- Botão para cadastrar um novo funcionário -->
+				<div class="d-md-flex justify-content-md-end">
+					<a class="action btn btn-outline-success" href="cadastra_fun.php">Cadastrar funcionários</a>
+				</div>
+				<div class="table-responsive">
+					<!-- Tabela de dados dos funcionários -->
+					<table class="table table-striped table-hover caption-top table-md align-middle shadow p-3 mb-5 bg-body-tertiary rounded table">
+						<caption>
+							<h3>Lista de funcionários</h3>
+						</caption>
 
-					<!-- Botão para cadastrar um novo funcionário -->
-					<div class="d-grid d-md-flex justify-content-md-end">
-						<a class="action btn btn-outline-success" href="cadastra_fun.php">Cadastrar funcionários</a>
-					</div>
-					<thead>
-						<tr>
-							<th>NOME</th>
-							<th>FUNÇÃO</th>
-							<th>STATUS</th>
-							<th>AÇÃO</th>
-						</tr>
-					</thead>
-					<tbody class="table-group-divider">
-						<?php
-						while ($registro = mysqli_fetch_row($sql_resultado)) {
-						?>
+						<thead>
 							<tr>
-								<!--NOME-->
-								<td>
-									<?php echo $registro[0]; ?>
-								</td>
-
-								<!--FUNÇÃO-->
-								<td>
+								<th>NOME</th>
+								<th>FUNÇÃO</th>
+								<th>STATUS</th>
+								<th>AÇÃO</th>
+							</tr>
+						</thead>
+						<tbody class="table-group-divider">
+							<?php
+							while ($registro = mysqli_fetch_row($sql_resultado)) {
+							?>
+								<tr>
+									<!--NOME-->
+									<td><?php echo $registro[0]; ?></td>
+									<!--FUNÇÃO-->
 									<!--ISSO CASO ESSE LINHA DA TABELA FOR UM LINK-->
 									<!--<a href="exibe_fun.php"></a>-->
-									<?php echo $registro[1]; ?>
-								</td>
-
-								<!--STATUS-->
-								<td>
-									<?php echo $registro[2]; ?>
-								</td>
-
-								<!--AÇÃO-->
-								<td>
-									<div class="d-grid gap-2 d-md-block">
-										<!-- Botão de alterar as informações -->
-										<a class="btn btn-warning" href="altera_fun.php?codigo=<?php echo $registro[3]; ?>" data-bs-toggle="editar" title="Editar"><i class="fas fa-edit"></i></a>
-										<!-- Boão de acessar as informações -->
-										<a class="btn btn-secondary" href="exibe_fun.php?codigo=<?php echo $registro[3]; ?>" data-bs-toggle="informações" title="Informações"><i class="fas fa-info"></i></a>
-									</div>
-								</td>
-							</tr>
-						<?php
-						}
-						?>
-					</tbody>
-				</table>
-				<!-- Fim da tabela de funcionarios -->
+									<td><?php echo $registro[1]; ?></td>
+									<!--STATUS-->
+									<td><?php echo $registro[2]; ?></td>
+									<!--AÇÃO-->
+									<td>
+										<div class="d-grid gap-2 d-md-block">
+											<!-- Botão de alterar as informações -->
+											<a class="btn btn-warning" href="altera_fun.php?codigo=<?php echo $registro[3]; ?>" data-bs-toggle="editar" title="Editar"><i class="fas fa-edit"></i></a>
+											<!-- Boão de acessar as informações -->
+											<a class="btn btn-secondary" href="exibe_fun.php?codigo=<?php echo $registro[3]; ?>" data-bs-toggle="informações" title="Informações"><i class="fas fa-info"></i></a>
+										</div>
+									</td>
+								</tr>
+							<?php
+							}
+							?>
+						</tbody>
+					</table>
+					<!-- Fim da tabela de funcionarios -->
+				</div>
 			</div>
 		</div>
 

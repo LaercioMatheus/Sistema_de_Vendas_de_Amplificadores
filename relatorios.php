@@ -33,27 +33,43 @@ session_start();
 			<!--PARTE DO MENU DO SITE-->
 			<nav class="navbar_menu">
 				<?php include "menu_local.php"; ?>
+
 				<!-- Spinner de Carregamento -->
-				<div id="spinner"></div>
+				<!-- Div do efeito do site quando o usuario sair -->
+				<div class="text-center">
+					<div id="spinner" class="show-overlay">
+						<div class="spinner-border md-5" role="status">
+							<span class="visually-hidden">Saindo...</span>
+						</div>
+					</div>
+				</div>
 			</nav>
 
 			<!--COMEÇO DOS ESTILOS DO MENU RESPONSIVO-->
-			<nav class="mobile-menu">
-
+			<nav class="mobile_menu">
 				<!--ICONE DO MENU RESPONSIVO-->
-				<div class="button-mobile">
-					<div class="line1"></div>
-					<div class="line2"></div>
-					<div class="line3"></div>
+				<div class="button_mobile">
+					<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileArea" aria-controls="mobileArea"><img src="img/img_project/menu-fechado.png" alt="#" srcset=""></button>
 				</div>
 
-				<nav class="nav-list">
-					<!--INCLUDE DA CREDENCIAL-->
-					<span class="credention"> Olá <?php include "valida_login.php"; ?></span>
-					<!--INCLUDE DO MENU-->
-					<?php include "menu_local.php"; ?>
-				</nav>
+				<!-- Essa é a div que irá mostrar o menu vindo do lado de fora da tela -->
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileArea" aria-labelledby="mobileAreaLabel">
+					<div class="offcanvas-header">
+						<!-- Titulo do menu lateral -->
+						<h5 class="offcanvas-title" id="mobileAreaRightLabel">Olá <?php include "valida_login.php"; ?></h5>
+
+						<!-- Botão para recolher o menu lateral -->
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+
+					<!-- Parte do menu sendo mostrada (corpo da div lateral) -->
+					<div class="offcanvas-body">
+						<!--Incluindo o menu nesse arquivo para não repetir o mesmo código do menu -->
+						<?php include "menu_local.php"; ?>
+					</div>
+				</div>
 			</nav>
+			<!-- FIM DO MENU RESPONSIVO -->
 		</header>
 		<!--OS breadcrumb DO SITE-->
 		<?php include "breadcrumb.php"; ?>
@@ -71,6 +87,8 @@ session_start();
 					<a class="btn btn-outline-success" href="rel_total_vendas.php">Faturamento total do mês</a>
 				</div>
 			</div>
+		</div>
+		
 			<div id="footer">
 				<div id="texto_institucional">
 					<p><a href="#">AMPLIFIC - CONTROL</a></p>
@@ -82,7 +100,6 @@ session_start();
 				</div>
 			</div>
 		</div>
-	</div>
 
 	<!--CONEXAO COM O SCRIPT DO JAVASCRIPT-->
 	<!-- CONEXAO COM OS FRAMEWORKS -->

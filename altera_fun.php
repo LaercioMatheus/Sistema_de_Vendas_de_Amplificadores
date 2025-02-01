@@ -34,27 +34,43 @@ session_start();
 			<!--PARTE DO MENU DO SITE-->
 			<nav class="navbar_menu">
 				<?php include "menu_local.php"; ?>
+
 				<!-- Spinner de Carregamento -->
-				<div id="spinner"></div>
+				<!-- Div do efeito do site quando o usuario sair -->
+				<div class="text-center">
+					<div id="spinner" class="show-overlay">
+						<div class="spinner-border md-5" role="status">
+							<span class="visually-hidden">Saindo...</span>
+						</div>
+					</div>
+				</div>
 			</nav>
 
 			<!--COMEÇO DOS ESTILOS DO MENU RESPONSIVO-->
-			<nav class="mobile-menu">
-
+			<nav class="mobile_menu">
 				<!--ICONE DO MENU RESPONSIVO-->
-				<div class="button-mobile">
-					<div class="line1"></div>
-					<div class="line2"></div>
-					<div class="line3"></div>
+				<div class="button_mobile">
+					<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileArea" aria-controls="mobileArea"><img src="img/img_project/menu-fechado.png" alt="#" srcset=""></button>
 				</div>
 
-				<nav class="nav-list">
-					<!--INCLUDE DA CREDENCIAL-->
-					<span class="credention"> Olá <?php include "valida_login.php"; ?></span>
-					<!--INCLUDE DO MENU-->
-					<?php include "menu_local.php"; ?>
-				</nav>
+				<!-- Essa é a div que irá mostrar o menu vindo do lado de fora da tela -->
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileArea" aria-labelledby="mobileAreaLabel">
+					<div class="offcanvas-header">
+						<!-- Titulo do menu lateral -->
+						<h5 class="offcanvas-title" id="mobileAreaRightLabel">Olá <?php include "valida_login.php"; ?></h5>
+
+						<!-- Botão para recolher o menu lateral -->
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+
+					<!-- Parte do menu sendo mostrada (corpo da div lateral) -->
+					<div class="offcanvas-body">
+						<!--Incluindo o menu nesse arquivo para não repetir o mesmo código do menu -->
+						<?php include "menu_local.php"; ?>
+					</div>
+				</div>
 			</nav>
+			<!-- FIM DO MENU RESPONSIVO -->
 		</header>
 		<!--OS breadcrumb DO SITE-->
 		<?php include "breadcrumb.php"; ?>
@@ -148,6 +164,7 @@ session_start();
 								formControl.className = "form_control success";
 							}
 						</script>
+
 					<?php
 					} else {
 					?>
@@ -160,26 +177,33 @@ session_start();
 
 							<small>Mensagem de erro</small>
 						</div>
+
 						<div class="form_control" id="style_funcao">
 							<label for="estoquista">Função: </label>
-							<label for="estoquista">Estoquista </label>
-							<input type="radio" name="funcao" value="estoquista" id="estoquista"
-								<?php
-								/* CONDICAO PARA COLOCAR O CHECKED NO INPUT */
-								if ($registro[1] == "estoquista") {
-									echo "checked";
-								}
-								?>>
 
-							<label for="vendedor">Vendedor </label>
-							<input type="radio" name="funcao" value="vendedor" id="vendedor"
-								<?php
-								/* CONDICAO PARA COLOCAR O CHECKED NO INPUT */
-								if ($registro[1] == "vendedor") {
-									echo "checked";
-								}
-								?>>
+							<div class="form-check form-check-inline">
+								<label id="form_radio" for="estoquista">Estoquista </label>
+								<input type="radio" name="funcao" value="estoquista" id="estoquista"
+									<?php
+									/* CONDICAO PARA COLOCAR O CHECKED NO INPUT */
+									if ($registro[1] == "estoquista") {
+										echo "checked";
+									}
+									?>>
+							</div>
+
+							<div class="form-check form-check-inline">
+								<label id="form_radio" for="vendedor">Vendedor </label>
+								<input type="radio" name="funcao" value="vendedor" id="vendedor"
+									<?php
+									/* CONDICAO PARA COLOCAR O CHECKED NO INPUT */
+									if ($registro[1] == "vendedor") {
+										echo "checked";
+									}
+									?>>
+							</div>
 						</div>
+
 						<div class="form_control">
 							<label for="login">Login: </label>
 							<input type="text" name="login" id="login" value="<?php echo $registro[2]; ?>" required>
@@ -189,6 +213,7 @@ session_start();
 
 							<small>Mensagem de erro</small>
 						</div>
+
 						<div class="form_control">
 							<label for="senha">Senha: </label>
 							<input type="password" name="senha" id="senha" value="<?php echo $registro[3]; ?>" required>
@@ -209,6 +234,7 @@ session_start();
 									}
 									?>> Ativo
 								</option>
+
 								<option value="inativo"
 									<?php
 									if ($registro[4] == "Inativo") {

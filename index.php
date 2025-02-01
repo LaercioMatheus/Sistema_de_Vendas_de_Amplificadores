@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
-<html lang="pt-br">
 
 <head>
 	<meta charset="utf-8" />
@@ -54,6 +53,11 @@
 					</div>
 
 					<button type="submit" class="style-button">Entrar</button>
+
+					<div class="form_footer">
+						<p class="ancle_form">Esqueceu sua senha? <a href="#">Redefinir a senha</a></p>
+						<p class="ancle_form">Não tem uma conta? <a href="cadastro.php">Cadastre-se</a></p>
+					</div>
 				</form>
 			</div>
 
