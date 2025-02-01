@@ -16,7 +16,7 @@ function handleLogout(event) {
   // Aguarda a animação antes de redirecionar
   setTimeout(() => {
     window.location.href = "index.php";
-  }, 10000); // 2 segundos para efeito
+  }, 2000); // 2 segundos para efeito
 }
 
 // Adiciona o evento de clique

@@ -41,6 +41,7 @@
 
         //script é executado pelo navegador NAO pelo servidor
         echo "<script>
+                    alert ('Login e Senha Corretos!! Seja Bem Vindo!!')
                 location.href = ('administracao.php')
               </script>";
 
@@ -51,15 +52,4 @@
 
               echo "<script> location.href = ('index.php') </script>";
     }
-
-    /* SCRIPT PARA SABER SE O FUNCIONÁRIO ESTÁ ATIVO OU INATIVO//
-        elseif ($resultado_consulta == 'Inativo') {
-        echo "<script>
-                    alert ('Esse funcionário não está ativo!')
-              </script>";
-
-              echo "<script> location.href = ('index.php') </script>";
-
-    }
-    */
 ?>

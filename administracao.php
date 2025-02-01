@@ -78,6 +78,12 @@ session_start();
 		<div id="conteudo_especifico">
 			<!-- <h2>Sistema de Controle de Estoque e Venda de Amplificadores da <strong>Rock N´ Rol Amplificadores</strong></h2> -->
 
+			<!-- Alerta para mostrar ao usuário como ele está logado no sistema -->
+			<div class="alert alert-success alert-dismissible fade show" role="alert">
+				<?php echo "Você está logado como " . $_SESSION["nome"]; ?>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+
 			<h3 class="title_response">Amplific Control - <strong>Rock N´ Rol Amplificadores</strong></h3>
 
 			<!-- CARDS PARA MOSTRAR OS AMPLIFICADORES PARA A VENDA, OS MAIS VENDIDOS ETC -->

@@ -92,7 +92,7 @@ session_start();
 				#ONDE ESTA A TABELA VINDA DO BANCO DE DADOS
 				$sql_resultado_consulta = mysqli_query($conectar, $sql_pesquisa_total_vendas);
 				$valor_total = 0;
-				
+
 				while ($registro_total_vendas = mysqli_fetch_row($sql_resultado_consulta)) {
 					$valor_total += $registro_total_vendas[0];
 				}
@@ -122,6 +122,12 @@ session_start();
 			</div>
 		</div>
 	</div>
+
+	<!--CONEXAO COM O SCRIPT DO JAVASCRIPT-->
+	<!-- CONEXAO COM OS FRAMEWORKS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="js/logout.js"></script>
 </body>
 
 </html>

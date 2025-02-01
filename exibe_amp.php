@@ -146,15 +146,15 @@ session_start();
 			/* CONDIÇÕES PARA APARECER O BOTÃO DE VOLTAR NA PÁGINA DE EXIBIÇÃO */
 			//if ($_SESSION["funcao"] == "administrador") {
 			?>
-				<!-- <a class="btn btn-secondary" href="lista_amp.php">Voltar</a> -->
+			<!-- <a class="btn btn-secondary" href="lista_amp.php">Voltar</a> -->
 			<?php
 			//} elseif ($_SESSION["funcao"] == "vendedor") {
 			?>
-				<!-- <a class="btn btn-secondary" href="vendas.php"> Voltar </a> -->
+			<!-- <a class="btn btn-secondary" href="vendas.php"> Voltar </a> -->
 			<?php
 			//} else {
 			?>
-				<!-- <a class="btn btn-secondary" href="lista_amp.php"> Voltar </a> -->
+			<!-- <a class="btn btn-secondary" href="lista_amp.php"> Voltar </a> -->
 			<?php
 			//}
 			?>
@@ -170,6 +170,12 @@ session_start();
 			</div>
 		</div>
 	</div>
+
+	<!--CONEXAO COM O SCRIPT DO JAVASCRIPT-->
+	<!-- CONEXAO COM OS FRAMEWORKS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="js/logout.js"></script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@
   $tipo = $_POST["tipo"];
   $foto = $_FILES["foto"];
 
-  $foto_nome = "img/".$foto["name"];
+  $foto_nome = "img/img_amplificadores".$foto["name"];
   move_uploaded_file($foto["tmp_name"], $foto_nome);
 
 
