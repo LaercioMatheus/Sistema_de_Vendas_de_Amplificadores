@@ -75,7 +75,7 @@ session_start();
 		<?php include "breadcrumb.php"; ?>
 
 		<div id="conteudo_especifico">
-			<div class="table-container">
+			<div class="table-container table-responsive">
 				<h2>Relatório dos Fornecedores</h2>
 				<?php
 				//CONECCAO COM O BANCO DE DADOS
